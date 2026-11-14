@@ -1,0 +1,2322 @@
+{
+    "source": "DGFiP, impots.gouv.fr",
+    "page": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "date_source": "2026-11-14",
+    "nombre": 165,
+    "nombres": {
+        "immatriculee": 159,
+        "attente_tests_interoperabilite": 6
+    },
+    "plateformes": [
+        {
+            "cle": "nom:a-cube",
+            "nom_commercial": "A-Cube",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "via Pisani Vittor 20, Milan",
+                "code_postal": "20124",
+                "commune_ou_pays": "Italie",
+                "pays": "Italie"
+            },
+            "site_internet": "https://www.acubeapi.com/",
+            "date_immatriculation": "2026-07-21",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:abby",
+            "nom_commercial": "ABBY",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "223-225 avenue Général Leclerc",
+                "code_postal": "54000",
+                "commune_ou_pays": "Nancy",
+                "pays": "France"
+            },
+            "site_internet": "https://abby.fr/",
+            "date_immatriculation": "2026-01-29",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:accenture",
+            "nom_commercial": "ACCENTURE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "118 Avenue de France",
+                "code_postal": "75013",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.accenture.com/fr-fr",
+            "date_immatriculation": "2025-12-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:ademico-software",
+            "nom_commercial": "ADEMICO SOFTWARE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "204 Heidebergstraat, Louvain",
+                "code_postal": "3010",
+                "commune_ou_pays": "Belgique",
+                "pays": "Belgique"
+            },
+            "site_internet": "https://ademico-software.com/",
+            "date_immatriculation": "2026-01-16",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:agena-3000",
+            "nom_commercial": "AGENA 3000",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "88 Rue du Paradis",
+                "code_postal": "49300",
+                "commune_ou_pays": "Cholet",
+                "pays": "France"
+            },
+            "site_internet": "https://www.agena3000.com/fr/nos-solutions/a3-e-facture",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:agicap",
+            "nom_commercial": "AGICAP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "57 rue de Saint-Cyr 57-59 imm Lyon Vaise",
+                "code_postal": "69009",
+                "commune_ou_pays": "Lyon",
+                "pays": "France"
+            },
+            "site_internet": "https://agicap.com/fr/",
+            "date_immatriculation": "2026-01-20",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:ags-records-management",
+            "nom_commercial": "AGS RECORDS MANAGEMENT",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "20 Rue de la Guillauderie",
+                "code_postal": "44118",
+                "commune_ou_pays": "La Chevrolière",
+                "pays": "France"
+            },
+            "site_internet": "https://www.ags-recordsmanagement.com/",
+            "date_immatriculation": "2026-07-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:arratech",
+            "nom_commercial": "Arratech",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Drottninggatan 33, Stockholm",
+                "code_postal": "111 51",
+                "commune_ou_pays": "Suède",
+                "pays": "Suède"
+            },
+            "site_internet": "https://www.arratech.com/",
+            "date_immatriculation": "2026-07-03",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:arteva",
+            "nom_commercial": "ARTEVA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "330 Allée des Hêtres",
+                "code_postal": "69760",
+                "commune_ou_pays": "Limonest",
+                "pays": "France"
+            },
+            "site_internet": "https://www.arteva.fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:aruba-s-p-a",
+            "nom_commercial": "Aruba S.p.A.",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Via San Clemente n. 53 Ponte San Pietro",
+                "code_postal": "24036",
+                "commune_ou_pays": "Italie",
+                "pays": "Italie"
+            },
+            "site_internet": "https://www.arubaonesuite.fr/",
+            "date_immatriculation": "2026-07-29",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:avalara",
+            "nom_commercial": "AVALARA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "33 Rue François 1er",
+                "code_postal": "75008",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.avalara.com/eu/fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:axelor",
+            "nom_commercial": "AXELOR",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "23 Rue Alfred Nobel",
+                "code_postal": "77420",
+                "commune_ou_pays": "Champs-sur-Marne",
+                "pays": "France"
+            },
+            "site_internet": "https://axelor.com/fr/",
+            "date_immatriculation": "2026-04-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:axonaut",
+            "nom_commercial": "AXONAUT",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "12 Rue Louis Renault",
+                "code_postal": "31130",
+                "commune_ou_pays": "Balma",
+                "pays": "France"
+            },
+            "site_internet": "https://axonaut.com/",
+            "date_immatriculation": "2026-01-08",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:axway-software",
+            "nom_commercial": "AXWAY SOFTWARE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "1 Bis Place de la Défense",
+                "code_postal": "92035",
+                "commune_ou_pays": "Paris La Défense Cedex",
+                "pays": "France"
+            },
+            "site_internet": "https://www.axway.com/fr",
+            "date_immatriculation": "2026-04-14",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:azopio",
+            "nom_commercial": "AZOPIO",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "38 rue de Wagram",
+                "code_postal": "75008",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.azopio.com/fr/",
+            "date_immatriculation": "2025-12-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:b2brouter",
+            "nom_commercial": "B2BRouter",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Avenida Diagonal 433 1 - 1 CP, Barcelona",
+                "code_postal": "08036",
+                "commune_ou_pays": "Espagne",
+                "pays": "Espagne"
+            },
+            "site_internet": "https://www.b2brouter.net/fr",
+            "date_immatriculation": "2025-12-12",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:b4value-net",
+            "nom_commercial": "B4VALUE.NET",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Trippstadter Str. 122,Kaiserslautern",
+                "code_postal": "67663",
+                "commune_ou_pays": "Allemagne",
+                "pays": "Allemagne"
+            },
+            "site_internet": "https://www.b4value.net/en/",
+            "date_immatriculation": "2026-03-04",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:basikon",
+            "nom_commercial": "Basikon",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "17 Rue de Kronstadt",
+                "code_postal": "92380",
+                "commune_ou_pays": "Garches",
+                "pays": "France"
+            },
+            "site_internet": "https://www.basikon.com/fr",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": true
+        },
+        {
+            "cle": "nom:basware",
+            "nom_commercial": "BASWARE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Linnoitustie 2, Espoo",
+                "code_postal": "02600",
+                "commune_ou_pays": "Finlande",
+                "pays": "Finlande"
+            },
+            "site_internet": "https://www.basware.com/fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:bc-solutions",
+            "nom_commercial": "BC SOLUTIONS",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "1330 Av. Jean-René Guillibert Gautier de la Lauzière",
+                "code_postal": "13290",
+                "commune_ou_pays": "Aix-en-Provence",
+                "pays": "France"
+            },
+            "site_internet": "https://bcsolutions.fr/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:be-fresh-s-a-r-l",
+            "nom_commercial": "BE FRESH S.à r.l.",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "13, rue de l'Innovation, Kockelscheuer",
+                "code_postal": "1896",
+                "commune_ou_pays": "Luxembourg",
+                "pays": "Luxembourg"
+            },
+            "site_internet": "https://befresh.lu/",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": true
+        },
+        {
+            "cle": "nom:billit",
+            "nom_commercial": "BILLIT",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Oktrooiplein 1 boite 302, Gent",
+                "code_postal": "9000",
+                "commune_ou_pays": "Belgique",
+                "pays": "Belgique"
+            },
+            "site_internet": "https://www.billit.eu/fr-be/",
+            "date_immatriculation": "2025-12-19",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:blg",
+            "nom_commercial": "BLG",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "1 Rue de la Sous-Préfecture",
+                "code_postal": "60200",
+                "commune_ou_pays": "Compiègne",
+                "pays": "France"
+            },
+            "site_internet": "https://www.blgcloud.fr/",
+            "date_immatriculation": "2026-08-26",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:cbs-corporate-business-solutions",
+            "nom_commercial": "CBS Corporate Business Solutions",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Rudolf-Diesel-Straße 9 en Heidelberg",
+                "code_postal": "69115",
+                "commune_ou_pays": "Allemagne",
+                "pays": "Allemagne"
+            },
+            "site_internet": "https://www.cbs-consulting.com/en/",
+            "date_immatriculation": "2026-02-25",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:cecurity",
+            "nom_commercial": "CECURITY",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "75 Rue Saint-Lazare",
+                "code_postal": "75009",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.cecurity.com",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:cegedim",
+            "nom_commercial": "CEGEDIM",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "137 Rue d'Aguesseau",
+                "code_postal": "92100",
+                "commune_ou_pays": "Boulogne-Billancourt",
+                "pays": "France"
+            },
+            "site_internet": "https://www.cegedim.fr",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:cegi-alfa",
+            "nom_commercial": "CEGI ALFA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "21 Rue Jules Verne, ZI du Brezet",
+                "code_postal": "63000",
+                "commune_ou_pays": "Clermont-Ferrand",
+                "pays": "France"
+            },
+            "site_internet": "https://www.cegi.fr/",
+            "date_immatriculation": "2026-04-14",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:cegid",
+            "nom_commercial": "CEGID",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "52 Quai Paul Sédallian",
+                "code_postal": "69279",
+                "commune_ou_pays": "Lyon Cedex 09",
+                "pays": "France"
+            },
+            "site_internet": "https://www.cegid.com/fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:cense",
+            "nom_commercial": "CENSE",
+            "statut": "attente_tests_interoperabilite",
+            "adresse": {
+                "voie": "4 Place Sadi Carnot",
+                "code_postal": "13002",
+                "commune_ou_pays": "Marseille",
+                "pays": "France"
+            },
+            "site_internet": "https://www.cpem.fr/o",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:chaintrust-by-visma",
+            "nom_commercial": "CHAINTRUST by Visma",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "9 rue des Colonnes",
+                "code_postal": "75002",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.chaintrust.io",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:cleartax",
+            "nom_commercial": "CLEARTAX",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "42 rue Cambronne",
+                "code_postal": "75015",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.cleartax.com/fr",
+            "date_immatriculation": "2026-04-24",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:comarch-sa",
+            "nom_commercial": "COMARCH SA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "al. Jana Pawła II 39a Kraków",
+                "code_postal": "/",
+                "commune_ou_pays": "Pologne",
+                "pays": "Pologne"
+            },
+            "site_internet": "https://www.comarch.com/",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:cyclope",
+            "nom_commercial": "CYCLOPE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "92 Cours Vitton",
+                "code_postal": "69006",
+                "commune_ou_pays": "Lyon",
+                "pays": "France"
+            },
+            "site_internet": "https://cyclope.digital/",
+            "date_immatriculation": "2026-08-25",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:darva",
+            "nom_commercial": "DARVA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "245 rue du stade",
+                "code_postal": "79180",
+                "commune_ou_pays": "Chauray",
+                "pays": "France"
+            },
+            "site_internet": "https://www.darva.com",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:dext",
+            "nom_commercial": "DEXT",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "34 rue Laffitte",
+                "code_postal": "75009",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://dext.com/fr/produits/logiciel-facturation",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:digipharmacie",
+            "nom_commercial": "DIGIPHARMACIE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "28 rue des Marguettes",
+                "code_postal": "75012",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://digipharmacie.fr/",
+            "date_immatriculation": "2025-12-23",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:digital-technologies",
+            "nom_commercial": "DIGITAL TECHNOLOGIES",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Via San Vittore 14, Milan",
+                "code_postal": "20122",
+                "commune_ou_pays": "Italie",
+                "pays": "Italie"
+            },
+            "site_internet": "https://digtechs.com/?lang=fr",
+            "date_immatriculation": "2025-12-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:docnova-melasoft-gmbh",
+            "nom_commercial": "Docnova, MELASOFT GmbH",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Gerbermühlstraße 32, Frankfurt",
+                "code_postal": "60594",
+                "commune_ou_pays": "Allemagne",
+                "pays": "Allemagne"
+            },
+            "site_internet": "https://www.melasoft.com/",
+            "date_immatriculation": "2026-05-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:docoon",
+            "nom_commercial": "DOCOON",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "81 Rue Réaumur",
+                "code_postal": "75002",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://docoon.com",
+            "date_immatriculation": "2025-12-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:docoon-immo-freedz",
+            "nom_commercial": "DOCOON IMMO / FREEDZ",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "32 Boulevard Michelet",
+                "code_postal": "13008",
+                "commune_ou_pays": "Marseille",
+                "pays": "France"
+            },
+            "site_internet": "https://docoon.immo/",
+            "date_immatriculation": "2025-12-23",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:docuware",
+            "nom_commercial": "DOCUWARE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "17 rue du Colisée",
+                "code_postal": "75008",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://start.docuware.com/fr/",
+            "date_immatriculation": "2025-12-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:dokapi",
+            "nom_commercial": "DOKAPI",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "75 Schuttersvest, Malines",
+                "code_postal": "2800",
+                "commune_ou_pays": "Belgique",
+                "pays": "Belgique"
+            },
+            "site_internet": "https://www.dokapi.io/",
+            "date_immatriculation": "2026-07-08",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:dougs-facturation-gratuite",
+            "nom_commercial": "Dougs Facturation gratuite",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Route de Sully la Chapelle",
+                "code_postal": "45450",
+                "commune_ou_pays": "Fay-aux-Loges",
+                "pays": "France"
+            },
+            "site_internet": "https://www.dougs.fr/logiciel-facturation-gratuit/",
+            "date_immatriculation": "2025-12-12",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:doxallia",
+            "nom_commercial": "DOXALLIA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Rue du Causse Comtal",
+                "code_postal": "12340",
+                "commune_ou_pays": "Bozouls",
+                "pays": "France"
+            },
+            "site_internet": "https://www.doxallia.com",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:eaglessoft",
+            "nom_commercial": "EAGLESSOFT",
+            "statut": "attente_tests_interoperabilite",
+            "adresse": {
+                "voie": "Excelsiorlaan 31, Zaventem",
+                "code_postal": "1930",
+                "commune_ou_pays": "Belgique",
+                "pays": "Belgique"
+            },
+            "site_internet": "https://eaglessoft.com/",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:ecosio-intercom-a-vertex-company",
+            "nom_commercial": "ecosio InterCom, a Vertex Company",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Maximilianstraße 35a, Munich",
+                "code_postal": "80539",
+                "commune_ou_pays": "Allemagne",
+                "pays": "Allemagne"
+            },
+            "site_internet": "https://ecosio.com/fr/",
+            "date_immatriculation": "2026-04-30",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:edicom-france",
+            "nom_commercial": "EDICOM France",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "55 Rue d'Amsterdam",
+                "code_postal": "75008",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://edicomgroup.fr",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:edicom-group",
+            "nom_commercial": "EDICOM Group",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "C/ Charles Robert Darwin,8 Parque Tecnologico de Paterna, Valencia",
+                "code_postal": "46980",
+                "commune_ou_pays": "Espagne",
+                "pays": "Espagne"
+            },
+            "site_internet": "https://edicomgroup.com",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:edics-france",
+            "nom_commercial": "EDICS France",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "5 Allée Moulin Berger",
+                "code_postal": "69130",
+                "commune_ou_pays": "Écully",
+                "pays": "France"
+            },
+            "site_internet": "https://edics.fr/",
+            "date_immatriculation": "2026-01-08",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:edieyes-vision-care",
+            "nom_commercial": "EdiEyes Vision Care",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "14 Allée du Haras",
+                "code_postal": "49100",
+                "commune_ou_pays": "Angers",
+                "pays": "France"
+            },
+            "site_internet": "https://www.edieyes.fr/",
+            "date_immatriculation": "2026-06-01",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:edt",
+            "nom_commercial": "EDT",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "85 Rue Lavoisier",
+                "code_postal": "38330",
+                "commune_ou_pays": "Montbonnot-Saint-Martin",
+                "pays": "France"
+            },
+            "site_internet": "https://www.group-edt.fr/",
+            "date_immatriculation": "2026-01-08",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:eezi-powered-by-vat-it",
+            "nom_commercial": "EEZI powered by VAT IT",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "29-31 Boulevard de le Paix",
+                "code_postal": "78100",
+                "commune_ou_pays": "SaintGermain-en-Laye",
+                "pays": "France"
+            },
+            "site_internet": "https://eezi.io/",
+            "date_immatriculation": "2026-01-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:effinum-by-spee",
+            "nom_commercial": "Effinum by SPEE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "18 Rue de l'Armorique",
+                "code_postal": "75015",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.effinum.fr/",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:enerj",
+            "nom_commercial": "ENERJ",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "3 Chemin de l'Orée du Bois",
+                "code_postal": "69570",
+                "commune_ou_pays": "Dardilly",
+                "pays": "France"
+            },
+            "site_internet": "https://www.enerj.fr/",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:entropics",
+            "nom_commercial": "ENTROPICS",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "4 rue Paul Lintier",
+                "code_postal": "69002",
+                "commune_ou_pays": "Lyon",
+                "pays": "France"
+            },
+            "site_internet": "https://entropics.fr",
+            "date_immatriculation": "2026-01-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:esalink",
+            "nom_commercial": "ESALINK",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "2 Rue Jules Méline",
+                "code_postal": "51430",
+                "commune_ou_pays": "Bezannes",
+                "pays": "France"
+            },
+            "site_internet": "https://www.esalink.com",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:esi",
+            "nom_commercial": "ESI",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "50 Rue Jean Zay",
+                "code_postal": "69800",
+                "commune_ou_pays": "Saint-Priest",
+                "pays": "France"
+            },
+            "site_internet": "https://www.esi-groupe.com/",
+            "date_immatriculation": "2026-01-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:esker",
+            "nom_commercial": "ESKER",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "113 Boulevard de la Bataille de Stalingrad",
+                "code_postal": "69100",
+                "commune_ou_pays": "Villeurbanne",
+                "pays": "France"
+            },
+            "site_internet": "https://www.esker.fr",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:euro-information",
+            "nom_commercial": "EURO INFORMATION",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "4 Rue Frédéric-Guillaume Raiffeisen",
+                "code_postal": "67000",
+                "commune_ou_pays": "Strasbourg",
+                "pays": "France"
+            },
+            "site_internet": "https://www.e-i.com/fr",
+            "date_immatriculation": "2025-12-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:ey-expertises-transactions",
+            "nom_commercial": "EY Expertises & Transactions",
+            "statut": "attente_tests_interoperabilite",
+            "adresse": {
+                "voie": "1-2 place des saisons",
+                "code_postal": "92400",
+                "commune_ou_pays": "Courbevoie",
+                "pays": "France"
+            },
+            "site_internet": "https://www.ey.com/fr_fr",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:facnote-pdp",
+            "nom_commercial": "FACNOTE PDP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Sky Center La Marseille 2B Bd Euroméditerranée",
+                "code_postal": "13002",
+                "commune_ou_pays": "MARSEILLE",
+                "pays": "France"
+            },
+            "site_internet": "https://www.facnote.com/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:factureapp",
+            "nom_commercial": "FACTUREAPP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "16 rue Cuvier",
+                "code_postal": "69002",
+                "commune_ou_pays": "Lyon",
+                "pays": "France"
+            },
+            "site_internet": "https://www.factureapp.com/",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": true
+        },
+        {
+            "cle": "nom:fiducial-cloud",
+            "nom_commercial": "FIDUCIAL CLOUD",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "41 Rue Du Capitaine Guynemer",
+                "code_postal": "92400",
+                "commune_ou_pays": "Courbevoie",
+                "pays": "France"
+            },
+            "site_internet": "https://www.fiducial.fr",
+            "date_immatriculation": "2026-01-08",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:fiskaltrust",
+            "nom_commercial": "FISKALTRUST",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "132 Rue Bossuet",
+                "code_postal": "69006",
+                "commune_ou_pays": "Lyon",
+                "pays": "France"
+            },
+            "site_internet": "https://fiskaltrust.eu/fr-fr/",
+            "date_immatriculation": "2026-08-28",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:flowie",
+            "nom_commercial": "FLOWIE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "229 Rue Saint-Honoré",
+                "code_postal": "75001",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.get-flowie.com/",
+            "date_immatriculation": "2026-01-07",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:fonoa-technologies-limited",
+            "nom_commercial": "Fonoa Technologies Limited",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "6th Floor, South Bank House, Barrow Street, Dublin 4, Dublin",
+                "code_postal": "D04TR29",
+                "commune_ou_pays": "Irlande",
+                "pays": "Irlande"
+            },
+            "site_internet": "https://www.fonoa.com/",
+            "date_immatriculation": "2026-04-29",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:fulll",
+            "nom_commercial": "FULLL",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "14 Rue Rhin et Danube",
+                "code_postal": "69009",
+                "commune_ou_pays": "Lyon",
+                "pays": "France"
+            },
+            "site_internet": "https://www.fulll.fr/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:generix-group",
+            "nom_commercial": "GENERIX Group",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Tour Légende 20 place de la Défense",
+                "code_postal": "92050",
+                "commune_ou_pays": "Paris La Défense",
+                "pays": "France"
+            },
+            "site_internet": "https://www.generixgroup.com/fr",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:gep",
+            "nom_commercial": "GEP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Innopoli 2 Tekniikantie 14",
+                "code_postal": "2600",
+                "commune_ou_pays": "Espoo (Finlande)",
+                "pays": "Finlande"
+            },
+            "site_internet": "https://www.gep.com/software/e-invoicing",
+            "date_immatriculation": "2026-06-17",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:gestav",
+            "nom_commercial": "GESTAV",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "57 bis rue de la pomme rouge",
+                "code_postal": "02100",
+                "commune_ou_pays": "Saint Quentin",
+                "pays": "France"
+            },
+            "site_internet": "https://gestav.com/",
+            "date_immatriculation": "2025-12-19",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:gp",
+            "nom_commercial": "@GP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "20, rue des Acacias",
+                "code_postal": "26120",
+                "commune_ou_pays": "Montélier",
+                "pays": "France"
+            },
+            "site_internet": "https://www.atgp.net/",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:groupe-sigma",
+            "nom_commercial": "GROUPE SIGMA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Rue Newton",
+                "code_postal": "44240",
+                "commune_ou_pays": "La Chapelle-sur-Erdre",
+                "pays": "France"
+            },
+            "site_internet": "https://www.sigma.fr/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:gurusoft",
+            "nom_commercial": "GURUSOFT",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Avda Brasil 29, Madrid",
+                "code_postal": "28020",
+                "commune_ou_pays": "Espagne",
+                "pays": "Espagne"
+            },
+            "site_internet": "https://guru-soft.com/fr/france/",
+            "date_immatriculation": "2026-03-31",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:iaf",
+            "nom_commercial": "IAF",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "27 Rue Alfred Nobel",
+                "code_postal": "77420",
+                "commune_ou_pays": "Champs-sur-Marne",
+                "pays": "France"
+            },
+            "site_internet": "https://www.assistances.fr/",
+            "date_immatriculation": "2026-06-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:icd-international",
+            "nom_commercial": "ICD International",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "17 Rue Jeanne Braconnier",
+                "code_postal": "92360",
+                "commune_ou_pays": "Meudon",
+                "pays": "France"
+            },
+            "site_internet": "https://icdint.fr",
+            "date_immatriculation": "2025-12-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:iedi-aps",
+            "nom_commercial": "iEDI ApS",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Strandvejen 60, 5e étage, Hellerup",
+                "code_postal": "2900",
+                "commune_ou_pays": "Danemark",
+                "pays": "Danemark"
+            },
+            "site_internet": "https://www.iedi.com/",
+            "date_immatriculation": "2026-02-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:iga-assurance",
+            "nom_commercial": "IGA ASSURANCE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "58 Rue Etienne Dolet",
+                "code_postal": "92240",
+                "commune_ou_pays": "Malakoff",
+                "pays": "France"
+            },
+            "site_internet": "https://www.iga-assurance.fr/",
+            "date_immatriculation": "2026-03-03",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:in-te-s-a-spa",
+            "nom_commercial": "In.Te.S.A. spa",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Strada Pianezza, 289, Torino",
+                "code_postal": "10151",
+                "commune_ou_pays": "Italie",
+                "pays": "Italie"
+            },
+            "site_internet": "https://www.intesa.it/",
+            "date_immatriculation": "2026-08-06",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:indicom",
+            "nom_commercial": "INDICOM",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Via Carnevali 39, Milano",
+                "code_postal": "20158",
+                "commune_ou_pays": "Italie",
+                "pays": "Italie"
+            },
+            "site_internet": "https://www.indicom.eu/en/idc-home",
+            "date_immatriculation": "2026-01-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:indy",
+            "nom_commercial": "INDY",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "94 Rue Robert",
+                "code_postal": "69006",
+                "commune_ou_pays": "LYON",
+                "pays": "France"
+            },
+            "site_internet": "https://www.indy.fr/",
+            "date_immatriculation": "2026-01-09",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:infologic",
+            "nom_commercial": "INFOLOGIC",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "99 Avenue de Lyon",
+                "code_postal": "26500",
+                "commune_ou_pays": "Bourg-lès-Valence",
+                "pays": "France"
+            },
+            "site_internet": "https://www.infologic-copilote.fr/",
+            "date_immatriculation": "2026-01-28",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:insiders-technologies-gmbh",
+            "nom_commercial": "Insiders Technologies GmbH",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Brüsseler Straße 1, Kaiserslautern",
+                "code_postal": "67657",
+                "commune_ou_pays": "Allemagne",
+                "pays": "Allemagne"
+            },
+            "site_internet": "https://insiders-technologies.com/en/",
+            "date_immatriculation": "2026-11-02",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:invopop",
+            "nom_commercial": "INVOPOP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Calle Pradillo 42, Madrid",
+                "code_postal": "28002",
+                "commune_ou_pays": "Espagne",
+                "pays": "Espagne"
+            },
+            "site_internet": "https://www.invopop.com/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:iopole",
+            "nom_commercial": "IOPOLE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "145 Impasse John Locke",
+                "code_postal": "34470",
+                "commune_ou_pays": "Pérols",
+                "pays": "France"
+            },
+            "site_internet": "https://www.iopole.com",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:ipaidthat",
+            "nom_commercial": "iPaidThat",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Avenue d'Alphasis",
+                "code_postal": "35760",
+                "commune_ou_pays": "Saint-Grégoire",
+                "pays": "France"
+            },
+            "site_internet": "https://ipaidthat.io/fr",
+            "date_immatriculation": "2026-01-06",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:itesoft",
+            "nom_commercial": "ITESOFT",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Chemin du Mas d'Andron",
+                "code_postal": "30470",
+                "commune_ou_pays": "Aimargues",
+                "pays": "France"
+            },
+            "site_internet": "https://www.itesoft.com/fr",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:jefacture-com",
+            "nom_commercial": "jefacture.com",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "216 Rue Raymond Losserand",
+                "code_postal": "75014",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.ecma-solutions.com",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:kalanda",
+            "nom_commercial": "KALANDA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "94 Avenue de la Sarriette",
+                "code_postal": "13600",
+                "commune_ou_pays": "La Ciotat",
+                "pays": "France"
+            },
+            "site_internet": "https://www.kalanda.net/",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": true
+        },
+        {
+            "cle": "nom:klekoon",
+            "nom_commercial": "KLEKOON",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "12, Rue Paul Langevin",
+                "code_postal": "93270",
+                "commune_ou_pays": "Sevran",
+                "pays": "France"
+            },
+            "site_internet": "https://www.klekoon.com/",
+            "date_immatriculation": "2026-01-16",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:kolecto-pa",
+            "nom_commercial": "KOLECTO PA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "155 Boulevard Haussmann",
+                "code_postal": "75008",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.kolecto.fr",
+            "date_immatriculation": "2026-04-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:kolecto-pdp",
+            "nom_commercial": "KOLECTO PDP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "50 Rue la Boétie",
+                "code_postal": "75008",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.kolecto.fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:konica-minolta-business-solutions-france",
+            "nom_commercial": "Konica Minolta Business Solutions France",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "365 Route de Saint Germain",
+                "code_postal": "78420",
+                "commune_ou_pays": "Carrières-sur-Seine",
+                "pays": "France"
+            },
+            "site_internet": "https://www.konicaminolta.fr/fr-fr",
+            "date_immatriculation": "2026-11-03",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:le-village-connecte",
+            "nom_commercial": "LE VILLAGE CONNECTE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "2322 Route du Latéral",
+                "code_postal": "47400",
+                "commune_ou_pays": "Fauguerolles",
+                "pays": "France"
+            },
+            "site_internet": "https://village-connecte.fr/",
+            "date_immatriculation": "2026-01-08",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:legalinvoice-by-tinexta-infocert",
+            "nom_commercial": "Legalinvoice by Tinexta Infocert",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Piazzale Flaminio 1B, Rome",
+                "code_postal": "00196",
+                "commune_ou_pays": "Italie",
+                "pays": "Italie"
+            },
+            "site_internet": "https://www.infocert.it/",
+            "date_immatriculation": "2026-04-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:logilec",
+            "nom_commercial": "LOGILEC",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Route de Kerscao",
+                "code_postal": "29480",
+                "commune_ou_pays": "Le Relecq-Kerhuon",
+                "pays": "France"
+            },
+            "site_internet": "https://www.logilec.fr/",
+            "date_immatriculation": "2026-01-06",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:lucca",
+            "nom_commercial": "LUCCA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "151 Avenue de France",
+                "code_postal": "75013",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.lucca.fr",
+            "date_immatriculation": "2026-04-24",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:lundi-matin",
+            "nom_commercial": "LUNDI MATIN",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "1025 Avenue Henri Becquerel",
+                "code_postal": "34000",
+                "commune_ou_pays": "Montpellier",
+                "pays": "France"
+            },
+            "site_internet": "https://www.lundimatin.fr/",
+            "date_immatriculation": "2026-08-24",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:macompta-fr",
+            "nom_commercial": "MACOMPTA.FR",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "20 Rue des Greffières",
+                "code_postal": "17140",
+                "commune_ou_pays": "Lagord",
+                "pays": "France"
+            },
+            "site_internet": "https://www.macompta.fr/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:marosa",
+            "nom_commercial": "MAROSA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "C/ Policarpo Sanz 36 - 2e D, VigoPontevedra",
+                "code_postal": "36202",
+                "commune_ou_pays": "Espagne",
+                "pays": "Espagne"
+            },
+            "site_internet": "https://marosavat.com/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:medius",
+            "nom_commercial": "MEDIUS",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "35 Rue des Jeuneurs",
+                "code_postal": "75002",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.medius.com/fr",
+            "date_immatriculation": "2026-01-08",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:my-eddy",
+            "nom_commercial": "MY-EDDY",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "2507 Avenue de l'Europe",
+                "code_postal": "69140",
+                "commune_ou_pays": "Rillieux-la-Pape",
+                "pays": "France"
+            },
+            "site_internet": "https://dailyapps.fr/",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": true
+        },
+        {
+            "cle": "nom:my-fiteco",
+            "nom_commercial": "MY FITECO",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Rue Albert Einstein",
+                "code_postal": "53810",
+                "commune_ou_pays": "Changé",
+                "pays": "France"
+            },
+            "site_internet": "https://myfiteco.com/",
+            "date_immatriculation": "2026-05-12",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:my-unisoft",
+            "nom_commercial": "MY UNISOFT",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Immeuble le Carré, 2 Rue George Stephenson",
+                "code_postal": "78180",
+                "commune_ou_pays": "Montigny-le-Bretonneux",
+                "pays": "France"
+            },
+            "site_internet": "https://myunisoft.fr/",
+            "date_immatriculation": "2026-04-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:mykinexo-pdp",
+            "nom_commercial": "MyKinexo PDP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "10 RUE ALAIN GERBAULT",
+                "code_postal": "35000",
+                "commune_ou_pays": "Rennes",
+                "pays": "France"
+            },
+            "site_internet": "https://www.kinexo.fr/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:mysupply-aps",
+            "nom_commercial": "MySupply Aps",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Østre Fælledvej 8, Nørresundby",
+                "code_postal": "9400",
+                "commune_ou_pays": "Danemark",
+                "pays": "Danemark"
+            },
+            "site_internet": "https://mysupply.dk/en",
+            "date_immatriculation": "2026-03-03",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:n2f-pdp",
+            "nom_commercial": "N2F PDP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "233 Chemin des Grandes Terres",
+                "code_postal": "01250",
+                "commune_ou_pays": "Montagnat",
+                "pays": "France"
+            },
+            "site_internet": "https://www.n2f.com/fr/note-de-frais/",
+            "date_immatriculation": "2025-12-19",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:neotimo",
+            "nom_commercial": "NEOTIMO",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "27 rue de la Tuilerie",
+                "code_postal": "45200",
+                "commune_ou_pays": "Amilly",
+                "pays": "France"
+            },
+            "site_internet": "https://neotimo.com/",
+            "date_immatriculation": "2026-04-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:ntt-data-business-solutions",
+            "nom_commercial": "NTT DATA Business Solutions",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Philipp-Reis-Str 2, Bautzen",
+                "code_postal": "02625",
+                "commune_ou_pays": "Allemagne",
+                "pays": "Allemagne"
+            },
+            "site_internet": "https://fr.nttdata.com/",
+            "date_immatriculation": "2026-05-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:odoo",
+            "nom_commercial": "ODOO",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "40, Chaussée de Namur, Grand Rosière",
+                "code_postal": "1367",
+                "commune_ou_pays": "Belgique",
+                "pays": "Belgique"
+            },
+            "site_internet": "https://www.odoo.com/fr_FR",
+            "date_immatriculation": "2026-04-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:officein",
+            "nom_commercial": "OfficeIn",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "15 Rue Pierre Lescot",
+                "code_postal": "75001",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://officein.fr/",
+            "date_immatriculation": "2026-07-09",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:one-up",
+            "nom_commercial": "ONE UP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "124 Rue Réaumur",
+                "code_postal": "75002",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://smallbusiness.oneup.com/fr/",
+            "date_immatriculation": "2026-01-08",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:open-bee",
+            "nom_commercial": "OPEN BEE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "ZAC des Longerays",
+                "code_postal": "74370",
+                "commune_ou_pays": "Epagny Metz-Tessy",
+                "pays": "France"
+            },
+            "site_internet": "https://www.openbee.com",
+            "date_immatriculation": "2026-01-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:opentext",
+            "nom_commercial": "OPENTEXT",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Taurusavenue 15 Zuidtoren, Hoofddorp",
+                "code_postal": "2132",
+                "commune_ou_pays": "Pays-Bas",
+                "pays": "Pays-Bas"
+            },
+            "site_internet": "https://www.opentext.fr",
+            "date_immatriculation": "2025-12-12",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:pagero",
+            "nom_commercial": "PAGERO",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Västra Hamngatan 1, Göteborg",
+                "code_postal": "411 17",
+                "commune_ou_pays": "Suède",
+                "pays": "Suède"
+            },
+            "site_internet": "https://www.pagero.com/fr",
+            "date_immatriculation": "2025-12-19",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:paragon",
+            "nom_commercial": "PARAGON",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "274 Boulevard Clémenceau",
+                "code_postal": "59700",
+                "commune_ou_pays": "Marcq-en-Barœul",
+                "pays": "France"
+            },
+            "site_internet": "https://www.paragon.world/fr",
+            "date_immatriculation": "2025-12-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:payflows",
+            "nom_commercial": "PAYFLOWS",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "17 Rue de la Comète",
+                "code_postal": "75007",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://payflows.io",
+            "date_immatriculation": "2026-04-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:pennylane",
+            "nom_commercial": "PENNYLANE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "2-4 Rue Jules Lefebvre",
+                "code_postal": "75009",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.pennylane.com/fr",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:pitney-bowes",
+            "nom_commercial": "PITNEY BOWES",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "5 rue Francis de Pressensé",
+                "code_postal": "93210",
+                "commune_ou_pays": "Saint-Denis",
+                "pays": "France"
+            },
+            "site_internet": "https://www.pitneybowes.com/fr",
+            "date_immatriculation": "2026-01-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:ponsot-conseil-gestion",
+            "nom_commercial": "Ponsot Conseil Gestion",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "185 Avenue Henri Mauriat",
+                "code_postal": "13100",
+                "commune_ou_pays": "Aix-en-Provence",
+                "pays": "France"
+            },
+            "site_internet": "https://www.ponsotconseilgestion.com/",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": true
+        },
+        {
+            "cle": "nom:qonto",
+            "nom_commercial": "QONTO",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "18 Rue de Navarin",
+                "code_postal": "75009",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://qonto.com/fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:qweeby",
+            "nom_commercial": "QWEEBY",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "8 Rue Louis Braille",
+                "code_postal": "42000",
+                "commune_ou_pays": "Saint-Étienne",
+                "pays": "France"
+            },
+            "site_internet": "https://www.qweeby.fr/",
+            "date_immatriculation": "2025-12-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:ratioo",
+            "nom_commercial": "RATIOO",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "300 Rue du Noir Debout",
+                "code_postal": "59242",
+                "commune_ou_pays": "Cappelle-en-Pévèle",
+                "pays": "France"
+            },
+            "site_internet": "https://ratioo.fr",
+            "date_immatriculation": "2026-10-09",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:sage",
+            "nom_commercial": "SAGE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "10 Place de Belgique",
+                "code_postal": "92250",
+                "commune_ou_pays": "La Garenne-Colombes",
+                "pays": "France"
+            },
+            "site_internet": "https://www.sage.com/fr-fr/",
+            "date_immatriculation": "2025-12-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:sage-holding-france",
+            "nom_commercial": "Sage Holding France",
+            "statut": "attente_tests_interoperabilite",
+            "adresse": {
+                "voie": "52 Avenue du Général de Gaulle",
+                "code_postal": "92800",
+                "commune_ou_pays": "Puteaux",
+                "pays": "France"
+            },
+            "site_internet": "https://www.sage.com/fr-fr/",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:sap",
+            "nom_commercial": "SAP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Dietmar-Hopp-Allee 16, Walldorf",
+                "code_postal": "69190",
+                "commune_ou_pays": "Allemagne",
+                "pays": "Allemagne"
+            },
+            "site_internet": "https://www.sap.com/france/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:scribee",
+            "nom_commercial": "SCRIBEE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "128 Rue la Boétie",
+                "code_postal": "75008",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.scribee.tech/",
+            "date_immatriculation": "2025-12-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:seeburger",
+            "nom_commercial": "SEEBURGER",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "1 Edisonstrasse, Bretten",
+                "code_postal": "75015",
+                "commune_ou_pays": "Allemagne",
+                "pays": "Allemagne"
+            },
+            "site_internet": "https://www.seeburger.com/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:septeo",
+            "nom_commercial": "SEPTEO",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "194 avenue de la Gare sud de france",
+                "code_postal": "34970",
+                "commune_ou_pays": "Lattes",
+                "pays": "France"
+            },
+            "site_internet": "https://www.septeopdp.com",
+            "date_immatriculation": "2026-01-09",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:seqino",
+            "nom_commercial": "SEQINO",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "2 Route de la Noue",
+                "code_postal": "91190",
+                "commune_ou_pays": "Gif-sur-Yvette",
+                "pays": "France"
+            },
+            "site_internet": "https://seqino.com",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:serensia-by-quadient",
+            "nom_commercial": "SERENSIA by Quadient",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "15 Rue des Mathurins",
+                "code_postal": "75009",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.serensia.com/",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:seres",
+            "nom_commercial": "SERES",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "45 Bd Paul Vaillant Couturier",
+                "code_postal": "94200",
+                "commune_ou_pays": "Ivry-sur-Seine",
+                "pays": "France"
+            },
+            "site_internet": "https://www.seres.fr",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:shine-solutions-aps",
+            "nom_commercial": "Shine Solutions ApS",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Fiolstræde 17B, København",
+                "code_postal": "1171",
+                "commune_ou_pays": "Danemark",
+                "pays": "Danemark"
+            },
+            "site_internet": "https://www.shine.fr/",
+            "date_immatriculation": "2026-05-21",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:sni",
+            "nom_commercial": "SNI",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Dunajska jesta 136, Ljubljana",
+                "code_postal": "1000",
+                "commune_ou_pays": "Slovénie",
+                "pays": "Slovénie"
+            },
+            "site_internet": "https://snitechnology.net/fr",
+            "date_immatriculation": "2026-04-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:solo",
+            "nom_commercial": "SOLO",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Sveavägen 13, Stockholm",
+                "code_postal": "111 57",
+                "commune_ou_pays": "Suède",
+                "pays": "Suède"
+            },
+            "site_internet": "https://www.solo.fr",
+            "date_immatriculation": "2026-02-16",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:sovos",
+            "nom_commercial": "SOVOS",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Rua do Viriato, nº 13, 3º étage, 233 Lisbonne",
+                "code_postal": "1050",
+                "commune_ou_pays": "Portugal",
+                "pays": "Portugal"
+            },
+            "site_internet": "https://www.saphety.com/fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:spendesk",
+            "nom_commercial": "SPENDESK",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "51 Rue de Londres",
+                "code_postal": "75008",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.spendesk.com/fr/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:sps-commerce",
+            "nom_commercial": "SPS COMMERCE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "De Corridor 5 ZA, Breukelen",
+                "code_postal": "3621",
+                "commune_ou_pays": "Pays-Bas",
+                "pays": "Pays-Bas"
+            },
+            "site_internet": "https://tiekinetix.com/fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:srci",
+            "nom_commercial": "SRCI",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "4 Rue Joseph Fourier",
+                "code_postal": "28000",
+                "commune_ou_pays": "Chartres",
+                "pays": "France"
+            },
+            "site_internet": "https://solutions.srci.fr/",
+            "date_immatriculation": "2026-01-19",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:storecove",
+            "nom_commercial": "STORECOVE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "s-Gravelandseweg 46D, Hilversum",
+                "code_postal": "1211 BT",
+                "commune_ou_pays": "Pays-Bas",
+                "pays": "Pays-Bas"
+            },
+            "site_internet": "https://www.storecove.com/fr/fr",
+            "date_immatriculation": "2026-04-28",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:super-pdp",
+            "nom_commercial": "SUPER PDP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "6 rue de la Dhuis",
+                "code_postal": "75020",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.superpdp.tech/",
+            "date_immatriculation": "2025-12-22",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:swile",
+            "nom_commercial": "SWILE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "561 Rue Georges Méliès",
+                "code_postal": "34000",
+                "commune_ou_pays": "Montpellier",
+                "pays": "France"
+            },
+            "site_internet": "https://www.swile.co/",
+            "date_immatriculation": "2026-11-02",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:symtrax",
+            "nom_commercial": "SYMTRAX",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "11 Rue Raymond Marc",
+                "code_postal": "30000",
+                "commune_ou_pays": "Nîmes",
+                "pays": "France"
+            },
+            "site_internet": "https://www.symtrax.com/fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:taxera",
+            "nom_commercial": "TAXERA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "40 Rue Alexandre Dumas",
+                "code_postal": "75011",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://taxera.tech/",
+            "date_immatriculation": "2026-06-04",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:taxilla-europe-bv",
+            "nom_commercial": "Taxilla Europe BV",
+            "statut": "attente_tests_interoperabilite",
+            "adresse": {
+                "voie": "Rue des Colonies 11, Brussels",
+                "code_postal": "1000",
+                "commune_ou_pays": "Belgique",
+                "pays": "Belgique"
+            },
+            "site_internet": "https://www.taxilla.com/",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:teamsystem-sellsy",
+            "nom_commercial": "TeamSystem Sellsy",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Avenue du Lazaret",
+                "code_postal": "17000",
+                "commune_ou_pays": "La Rochelle",
+                "pays": "France"
+            },
+            "site_internet": "https://go.sellsy.com/",
+            "date_immatriculation": "2025-12-24",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:tenor",
+            "nom_commercial": "TENOR",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "5 Rue des Anciennes Tanneries",
+                "code_postal": "69600",
+                "commune_ou_pays": "Oullins",
+                "pays": "France"
+            },
+            "site_internet": "https://tenorsolutions.com",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:tesisquare-spa",
+            "nom_commercial": "TESISQUARE SPA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Via Mendicità Istruita 24, Bra CN",
+                "code_postal": "12042",
+                "commune_ou_pays": "Italie",
+                "pays": "Italie"
+            },
+            "site_internet": "https://www.tesisquare.com/fr",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:tessi-technologies",
+            "nom_commercial": "TESSI Technologies",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Immeuble Cassiopee, 1-3 Avenue des Satellites",
+                "code_postal": "33185",
+                "commune_ou_pays": "Le Haillan",
+                "pays": "France"
+            },
+            "site_internet": "https://www.tessi.eu/fr",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:tiime-pdp",
+            "nom_commercial": "TIIME PDP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "15 Rue Auber",
+                "code_postal": "75009",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.tiime.fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:tradeshift-babelway",
+            "nom_commercial": "TRADESHIFT BABELWAY",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Chemin du Cyclotron 6, Ottignies-Louvain-la-Neuve",
+                "code_postal": "1348",
+                "commune_ou_pays": "Belgique",
+                "pays": "Belgique"
+            },
+            "site_internet": "https://tradeshift.com/fr",
+            "date_immatriculation": "2026-01-06",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:transalis-limited",
+            "nom_commercial": "Transalis Limited",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Kyriakou Matsi 16, Nicosie",
+                "code_postal": "1082",
+                "commune_ou_pays": "Chypre",
+                "pays": "Chypre"
+            },
+            "site_internet": "https://www.transalis.com/",
+            "date_immatriculation": "2026-01-19",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:treso2",
+            "nom_commercial": "TRESO2",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "35 Rue des Mathurins",
+                "code_postal": "75008",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "http://www.treso2.com",
+            "date_immatriculation": "2026-01-08",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:tungsten-automation-france",
+            "nom_commercial": "TUNGSTEN AUTOMATION FRANCE",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "18 Boulevard Malesherbes",
+                "code_postal": "75008",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.tungstenautomation.fr/",
+            "date_immatriculation": "2025-12-23",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:tx2-concept",
+            "nom_commercial": "TX2 Concept",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "491 Boulevard Duhamel du Monceau",
+                "code_postal": "45160",
+                "commune_ou_pays": "Olivet",
+                "pays": "France"
+            },
+            "site_internet": "https://tx2.fr",
+            "date_immatriculation": "2026-01-14",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:ventya",
+            "nom_commercial": "VENTYA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "3, Boulevard des Bouvets",
+                "code_postal": "92000",
+                "commune_ou_pays": "Nanterre",
+                "pays": "France"
+            },
+            "site_internet": "https://www.ventya.fr",
+            "date_immatriculation": "2025-12-18",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:veryswing",
+            "nom_commercial": "VERYSWING",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "143bis Rue Yves le Coz",
+                "code_postal": "78000",
+                "commune_ou_pays": "Versailles",
+                "pays": "France"
+            },
+            "site_internet": "https://veryswing.com/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:vosfactures",
+            "nom_commercial": "VosFactures",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "FACTUALI 470 Promenade des Anglais",
+                "code_postal": "06200",
+                "commune_ou_pays": "Nice",
+                "pays": "France"
+            },
+            "site_internet": "https://vosfactures.fr/",
+            "date_immatriculation": "2026-04-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:voxel-an-amadeus-company",
+            "nom_commercial": "VOXEL, an Amadeus company",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Carrer Cristóbal de Moura 115 1st floor, Barcelone",
+                "code_postal": "8019",
+                "commune_ou_pays": "Espagne",
+                "pays": "Espagne"
+            },
+            "site_internet": "https://www.voxelgroup.net/facture-electronique/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:weproc",
+            "nom_commercial": "WEPROC",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "2 Parvis des Écoles",
+                "code_postal": "83000",
+                "commune_ou_pays": "Toulon",
+                "pays": "France"
+            },
+            "site_internet": "https://www.weproc.com/fr/",
+            "date_immatriculation": "2025-12-23",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:wisetech-global",
+            "nom_commercial": "WiseTech GLOBAL",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "25 Bourke Road, Alexandria NSW 2015",
+                "code_postal": "/",
+                "commune_ou_pays": "Australie",
+                "pays": "Australie"
+            },
+            "site_internet": "https://www.wisetechglobal.com/fr-fr/",
+            "date_immatriculation": "2026-01-15",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:xelya",
+            "nom_commercial": "XELYA",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "1 Rue Royale 174 Bureaux de la Colline",
+                "code_postal": "92210",
+                "commune_ou_pays": "Saint-Cloud",
+                "pays": "France"
+            },
+            "site_internet": "https://www.xelya.com/",
+            "date_immatriculation": "2026-05-13",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:yooz-pdp",
+            "nom_commercial": "YOOZ PDP",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Le Sequoia Parc d'Andron",
+                "code_postal": "30470",
+                "commune_ou_pays": "Aimargues",
+                "pays": "France"
+            },
+            "site_internet": "https://www.getyooz.com/fr",
+            "date_immatriculation": "2025-12-11",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:ytems",
+            "nom_commercial": "YTEMS",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "11 Rue de Lourmel",
+                "code_postal": "75015",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://com.ytems.app/",
+            "date_immatriculation": "2026-08-03",
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:yuman",
+            "nom_commercial": "YUMAN",
+            "statut": "attente_tests_interoperabilite",
+            "adresse": {
+                "voie": "Square de Meuûs 35",
+                "code_postal": "1000",
+                "commune_ou_pays": "Belgique",
+                "pays": "Belgique"
+            },
+            "site_internet": "https://www.yuman.io/",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": false
+        },
+        {
+            "cle": "nom:zefyr",
+            "nom_commercial": "ZEFYR",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "12 Rue Ernest Psichari",
+                "code_postal": "75007",
+                "commune_ou_pays": "Paris",
+                "pays": "France"
+            },
+            "site_internet": "https://www.zefyr.net/",
+            "date_immatriculation": null,
+            "immatriculation_en_attente": true
+        }
+    ]
+}

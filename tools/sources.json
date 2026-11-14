@@ -1,0 +1,35 @@
+{
+    "page": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "source": "DGFiP, impots.gouv.fr",
+    "fichiers": [
+        {
+            "cle": "immatriculee",
+            "fichier": "liste_pa_attente_rapport_audit.xlsx",
+            "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+            "libelle": "Plateformes qui remplissent toutes les conditions, tests d'interopérabilité compris",
+            "colonnes": [
+                "nom_commercial",
+                "adresse_voie",
+                "adresse_code_postal",
+                "adresse_commune_ou_pays",
+                "site_internet",
+                "courriel",
+                "date_immatriculation"
+            ]
+        },
+        {
+            "cle": "attente_tests_interoperabilite",
+            "fichier": "liste_pa_attente_test_interop.xlsx",
+            "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+            "libelle": "Plateformes au dossier complet, en attente des tests d'interopérabilité",
+            "colonnes": [
+                "nom_commercial",
+                "adresse_voie",
+                "adresse_code_postal",
+                "adresse_commune_ou_pays",
+                "site_internet",
+                "courriel"
+            ]
+        }
+    ]
+}

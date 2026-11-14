@@ -1,0 +1,51 @@
+{
+    "name": "polygonlab/plateformes-agreees-fr",
+    "description": "Liste officielle des plateformes agréées pour la facture électronique, en JSON et CSV, mise à jour chaque jour.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["facture-electronique", "plateformes-agreees", "pdp", "e-invoicing", "dgfip", "open-data", "france", "json", "csv", "donnees-publiques"],
+    "homepage": "https://github.com/polygonlab-ai/plateformes-agreees-fr",
+    "authors": [
+        {
+            "name": "PolygonLab",
+            "email": "contact@polygonlab.ai",
+            "homepage": "https://polygonlab.ai"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/polygonlab-ai/plateformes-agreees-fr/issues",
+        "source": "https://github.com/polygonlab-ai/plateformes-agreees-fr",
+        "security": "https://github.com/polygonlab-ai/plateformes-agreees-fr/security/policy"
+    },
+    "require": {
+        "php": ">=8.2"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "ext-xmlreader": "*",
+        "ext-zip": "*",
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "justinrainbow/json-schema": "^6.4",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PolygonLab\\PlateformesAgreees\\Outils\\": "tools/src/",
+            "PolygonLab\\PlateformesAgreees\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --no-progress",
+        "style": "php-cs-fixer fix --dry-run --diff",
+        "style-corriger": "php-cs-fixer fix",
+        "actualiser": "php tools/actualiser.php"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

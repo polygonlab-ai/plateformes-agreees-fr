@@ -1,0 +1,47 @@
+{
+    "source": "DGFiP, impots.gouv.fr",
+    "page": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
+    "lu_le": "2026-11-14T13:12:47+01:00",
+    "date_source": "2026-11-14",
+    "fichiers": [
+        {
+            "cle": "immatriculee",
+            "fichier": "liste_pa_attente_rapport_audit.xlsx",
+            "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+            "sha256": "efc4bff7a2d8a9986930afb4db4edc517b87577aa7abdb73cef7ba85cc30772b",
+            "taille": 29337,
+            "derniere_modification": null,
+            "date_indiquee": null,
+            "feuille": "Feuille1",
+            "colonnes": [
+                "Nom commercial",
+                "Adresse de l'établissement principal > Voie",
+                "Adresse de l'établissement principal > Code postal",
+                "Adresse de l'établissement principal > Commune (Pays le cas échéant)",
+                "Site internet",
+                "Courriel de contact",
+                "Date de délivrance du numéro d'immatriculation"
+            ],
+            "lignes": 159
+        },
+        {
+            "cle": "attente_tests_interoperabilite",
+            "fichier": "liste_pa_attente_test_interop.xlsx",
+            "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+            "sha256": "65c96830044f977de227c368e550909f1eea7ca129c784aacabcc5f60f8e09e7",
+            "taille": 7744,
+            "derniere_modification": null,
+            "date_indiquee": null,
+            "feuille": "PA en attente tests inter-opera",
+            "colonnes": [
+                "Nom commercial",
+                "Adresse de l'établissement principal > Voie",
+                "Adresse de l'établissement principal > Code postal",
+                "Adresse de l'établissement principal > Commune (Pays le cas échéant)",
+                "Site internet",
+                "Courriel de contact"
+            ],
+            "lignes": 6
+        }
+    ]
+}

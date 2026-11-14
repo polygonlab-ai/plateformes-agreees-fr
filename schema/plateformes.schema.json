@@ -1,0 +1,158 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/polygonlab-ai/plateformes-agreees-fr/main/schema/plateformes.schema.json",
+    "title": "Plateformes agréées pour la facture électronique",
+    "description": "Liste courante des plateformes agréées publiée par la DGFiP, telle que copiée dans data/plateformes.json.",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "source",
+        "page",
+        "date_source",
+        "nombre",
+        "nombres",
+        "plateformes"
+    ],
+    "properties": {
+        "source": {
+            "description": "Producteur des données.",
+            "type": "string",
+            "minLength": 1
+        },
+        "page": {
+            "description": "Page officielle de la liste.",
+            "type": "string",
+            "pattern": "^https://"
+        },
+        "date_source": {
+            "description": "Date de la liste (AAAA-MM-JJ) : date indiquée dans les fichiers, sinon date de modification annoncée par le serveur, sinon date de lecture. Null tant qu'aucune liste n'a été lue.",
+            "type": [
+                "string",
+                "null"
+            ],
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "nombre": {
+            "description": "Nombre total de plateformes.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "nombres": {
+            "description": "Nombre de plateformes par statut.",
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "immatriculee",
+                "attente_tests_interoperabilite"
+            ],
+            "properties": {
+                "immatriculee": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "attente_tests_interoperabilite": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "plateformes": {
+            "description": "Plateformes, triées par clé. Aucune adresse e-mail : les courriels de contact restent sur la page de la DGFiP.",
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/plateforme"
+            }
+        }
+    },
+    "definitions": {
+        "texte": {
+            "type": [
+                "string",
+                "null"
+            ],
+            "minLength": 1
+        },
+        "plateforme": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+                "cle",
+                "nom_commercial",
+                "statut",
+                "adresse",
+                "site_internet",
+                "date_immatriculation",
+                "immatriculation_en_attente"
+            ],
+            "properties": {
+                "cle": {
+                    "description": "Clé stable : « nom: » suivi du nom commercial simplifié (minuscules sans accent, mots séparés par des tirets). Les fichiers de la DGFiP ne donnent pas de SIREN.",
+                    "type": "string",
+                    "pattern": "^nom:[a-z0-9]+(-[a-z0-9]+)*$"
+                },
+                "nom_commercial": {
+                    "description": "Nom commercial de la plateforme, tel qu'écrit par la DGFiP.",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "statut": {
+                    "description": "immatriculee : toutes les conditions remplies, tests d'interopérabilité compris ; attente_tests_interoperabilite : dossier complet, tests d'interopérabilité à passer.",
+                    "type": "string",
+                    "enum": [
+                        "immatriculee",
+                        "attente_tests_interoperabilite"
+                    ]
+                },
+                "adresse": {
+                    "description": "Adresse de l'établissement principal.",
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                        "voie",
+                        "code_postal",
+                        "commune_ou_pays",
+                        "pays"
+                    ],
+                    "properties": {
+                        "voie": {
+                            "$ref": "#/definitions/texte"
+                        },
+                        "code_postal": {
+                            "description": "Code postal. Adresse française : 5 chiffres (le zéro de tête perdu par le fichier source est rétabli). Adresse étrangère : tel qu'écrit dans le fichier, ou null.",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "minLength": 1
+                        },
+                        "commune_ou_pays": {
+                            "description": "Commune pour une plateforme française, pays pour une plateforme étrangère (comme dans le fichier de la DGFiP).",
+                            "$ref": "#/definitions/texte"
+                        },
+                        "pays": {
+                            "description": "« France », ou le pays étranger reconnu dans la colonne « Commune (Pays le cas échéant) » (liste ISO 3166-1 en français).",
+                            "type": "string",
+                            "minLength": 1
+                        }
+                    }
+                },
+                "site_internet": {
+                    "description": "Site internet, tel qu'écrit par la DGFiP (https:// ou http://), ou null.",
+                    "$ref": "#/definitions/texte"
+                },
+                "date_immatriculation": {
+                    "description": "Date de délivrance du numéro d'immatriculation (AAAA-MM-JJ). Null quand la DGFiP écrit « En attente » (date pas encore connue, voir immatriculation_en_attente) et pour une plateforme en attente des tests d'interopérabilité.",
+                    "type": [
+                        "string",
+                        "null"
+                    ],
+                    "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+                },
+                "immatriculation_en_attente": {
+                    "description": "true quand la DGFiP écrit « En attente » à la place de la date de délivrance du numéro d'immatriculation (date pas encore connue) ; false sinon, et toujours false pour une plateforme en attente des tests d'interopérabilité.",
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
