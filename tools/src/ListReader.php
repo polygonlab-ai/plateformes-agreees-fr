@@ -246,7 +246,7 @@ final class ListReader
 
         $top = $rows[$headerRow];
         $sub = $rows[$headerRow + 1] ?? [];
-        $last = max(array_merge(array_keys($top), array_keys($sub)));
+        $last = max([0, ...array_keys($top), ...array_keys($sub)]);
         $parents = [];
         $inherited = null;
         for ($index = 0; $index <= $last; $index++) {

@@ -33,7 +33,7 @@ final class Downloader
         $last = '';
         for ($attempt = 1; $attempt <= self::ATTEMPTS; $attempt++) {
             if ($attempt > 1) {
-                sleep(self::PAUSES[$attempt - 2] ?? 15);
+                sleep(self::PAUSES[$attempt - 2]);
             }
             [$ok, $modified, $last] = self::attempt($url, $destination);
             if ($ok) {
@@ -82,7 +82,7 @@ final class Downloader
         if ($done === false || $status !== 200) {
             return [false, null, $error !== '' ? $error : 'HTTP ' . $status];
         }
-        if (\is_int($time) && $time > 0) {
+        if ($time > 0) {
             $modified = gmdate(DATE_ATOM, $time);
         }
 

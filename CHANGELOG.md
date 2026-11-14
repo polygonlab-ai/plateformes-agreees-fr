@@ -6,6 +6,14 @@ changement de la liste officielle donne une version de correctif, publiée autom
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et le projet respecte
 le [versionnage sémantique](https://semver.org/lang/fr/).
 
+## [0.1.1] - 2026-11-14 - Intégration continue au vert
+
+### Corrigé
+
+- Tests : la méthode d'aide `run()` de `tests/UpdaterTest.php` masquait la méthode finale `TestCase::run()` de PHPUnit et arrêtait toute la suite de tests ; elle s'appelle désormais `update()`.
+- Analyse statique PHPStan au niveau maximal : classeurs d'essai typés comme des cellules indexées par colonne, en-tête de l'historique déclaré non vide, deux contrôles redondants retirés dans `Downloader`, calcul de la dernière colonne protégé contre une ligne d'en-tête vide dans `ListReader`.
+- Données inchangées.
+
 ## [0.1.0] - 2026-11-14 - Première publication de la liste des plateformes agréées
 
 ### Ajouté
@@ -21,6 +29,7 @@ le [versionnage sémantique](https://semver.org/lang/fr/).
 - Les adresses de contact des fichiers officiels ne sont jamais recopiées ; aucun SIREN n'est déduit du nom (les fichiers n'en donnent pas).
 - Source : DGFiP, impots.gouv.fr, Licence Ouverte 2.0.
 
+[0.1.1]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.1.1
 [0.1.0]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.1.0
 
 ---

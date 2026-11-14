@@ -31,7 +31,7 @@ final class UpdaterTest extends TestCase
 
     public function testFirstReadWritesEveryFile(): void
     {
-        $result = $this->run(
+        $result = $this->update(
             [XlsxBuilder::platform('Alpha Facturation', 46002), ['@GP', 'via Esempio 20, Milan ', 20124, 'Italie', null, 'gp@example.com', 46224]],
             [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6)],
         );
@@ -83,7 +83,7 @@ final class UpdaterTest extends TestCase
 
     public function testNoEmailIsEverWrittenToTheDataFiles(): void
     {
-        $result = $this->run(
+        $result = $this->update(
             [XlsxBuilder::platform('Alpha Facturation'), XlsxBuilder::platform('@GP')],
             [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6)],
         );
@@ -97,14 +97,14 @@ final class UpdaterTest extends TestCase
 
     public function testDetectsEntriesExitsStatusAndNameChanges(): void
     {
-        $this->workspace->store($this->run(
+        $this->workspace->store($this->update(
             [XlsxBuilder::platform('Alpha Facturation'), XlsxBuilder::platform('Bêta Échanges')],
             [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6), array_slice(XlsxBuilder::platform('Delta Flux'), 0, 6)],
         )['files']);
         $before = $this->workspace->read(DataFiles::HISTORY_CSV);
 
         // Gamma passe dans la liste des immatriculées, Bêta sort, Alpha change d'écriture, Epsilon entre.
-        $result = $this->run(
+        $result = $this->update(
             [XlsxBuilder::platform('ALPHA Facturation'), XlsxBuilder::platform('Gamma Factures', 46340)],
             [array_slice(XlsxBuilder::platform('Delta Flux'), 0, 6), array_slice(XlsxBuilder::platform('Epsilon Dématérialisation'), 0, 6)],
             new \DateTimeImmutable('2026-11-20T06:20:00+01:00'),
@@ -122,7 +122,8 @@ final class UpdaterTest extends TestCase
         );
 
         $history = $result['files'][DataFiles::HISTORY_CSV];
-        self::assertStringStartsWith($before, $history, 'l\'historique ne fait que s\'allonger');
+        self::assertNotSame('', $before);
+        self::assertSame($before, substr($history, 0, \strlen($before)), 'l\'historique ne fait que s\'allonger');
         self::assertSame(
             "2026-11-20;changement_nom;nom:alpha-facturation;immatriculee;ALPHA Facturation;Alpha Facturation -> ALPHA Facturation\n"
             . "2026-11-20;entree;nom:epsilon-dematerialisation;attente_tests_interoperabilite;Epsilon Dématérialisation;en attente des tests d'interopérabilité\n"
@@ -139,9 +140,9 @@ final class UpdaterTest extends TestCase
     {
         $registered = [XlsxBuilder::platform('Alpha Facturation')];
         $awaiting = [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6)];
-        $this->workspace->store($this->run($registered, $awaiting)['files']);
+        $this->workspace->store($this->update($registered, $awaiting)['files']);
 
-        $result = $this->run($registered, $awaiting, new \DateTimeImmutable('2026-11-15T06:20:00+01:00'));
+        $result = $this->update($registered, $awaiting, new \DateTimeImmutable('2026-11-15T06:20:00+01:00'));
 
         self::assertFalse($result['changed']);
         self::assertSame([], $result['files']);
@@ -153,8 +154,8 @@ final class UpdaterTest extends TestCase
         $registered = [XlsxBuilder::platform('Alpha Facturation'), XlsxBuilder::platform('Bêta Échanges')];
         $awaiting = [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6)];
 
-        $first = $this->run($registered, $awaiting)['files'];
-        $second = $this->run(array_reverse($registered), $awaiting)['files'];
+        $first = $this->update($registered, $awaiting)['files'];
+        $second = $this->update(array_reverse($registered), $awaiting)['files'];
 
         self::assertSame($first[DataFiles::PLATFORMS_JSON], $second[DataFiles::PLATFORMS_JSON]);
         self::assertSame($first[DataFiles::PLATFORMS_CSV], $second[DataFiles::PLATFORMS_CSV]);
@@ -163,7 +164,7 @@ final class UpdaterTest extends TestCase
     public function testRefusesChangedHeadersUnlessAccepted(): void
     {
         $awaiting = [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6)];
-        $this->workspace->store($this->run([XlsxBuilder::platform('Alpha Facturation')], $awaiting)['files']);
+        $this->workspace->store($this->update([XlsxBuilder::platform('Alpha Facturation')], $awaiting)['files']);
 
         // Même champ, intitulé écrit autrement (« d’ » typographique) : reconnu, mais différent de la lecture précédente.
         $rows = XlsxBuilder::list([XlsxBuilder::platform('Alpha Facturation')]);
@@ -189,14 +190,14 @@ final class UpdaterTest extends TestCase
     {
         $this->expectException(SourceError::class);
         $this->expectExceptionMessage('figure dans les deux listes à la fois');
-        $this->run([XlsxBuilder::platform('Alpha Facturation')], [array_slice(XlsxBuilder::platform('Alpha facturation'), 0, 6)]);
+        $this->update([XlsxBuilder::platform('Alpha Facturation')], [array_slice(XlsxBuilder::platform('Alpha facturation'), 0, 6)]);
     }
 
     public function testRefusesAnEmptyList(): void
     {
         $this->expectException(SourceError::class);
         $this->expectExceptionMessage('liste_pa_attente_test_interop.xlsx : liste vide');
-        $this->run([XlsxBuilder::platform('Alpha Facturation')], []);
+        $this->update([XlsxBuilder::platform('Alpha Facturation')], []);
     }
 
     public function testUsesTheServerDateInParisTime(): void
@@ -228,7 +229,7 @@ final class UpdaterTest extends TestCase
      *
      * @return array{changed: bool, files: array<string, string>, summary: array<string, mixed>}
      */
-    private function run(array $registered, array $awaiting, ?\DateTimeImmutable $now = null): array
+    private function update(array $registered, array $awaiting, ?\DateTimeImmutable $now = null): array
     {
         $inputs = $this->workspace->inputs($registered, $awaiting);
 

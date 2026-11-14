@@ -354,7 +354,7 @@ final class ListReaderTest extends TestCase
     }
 
     /**
-     * @param list<list<string|int|null>> $rows
+     * @param list<array<int<0, max>, string|int|null>> $rows cellules indexées par colonne (0 = A), trous permis
      *
      * @return array{sheet: string, sheets: int, columns: list<string>, platforms: list<Platform>, stated_date: string|null}
      */

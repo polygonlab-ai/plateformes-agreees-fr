@@ -89,7 +89,7 @@ final class XlsxBuilder
     /**
      * Écrit le classeur et rend son chemin.
      *
-     * @param list<list<string|int|null>> $rows
+     * @param list<array<int<0, max>, string|int|null>> $rows cellules indexées par colonne (0 = A), trous permis
      * @param list<string> $merges plages fusionnées (« B1:D1 »)
      */
     public static function write(string $path, array $rows, string $sheet = 'Liste', array $merges = []): string

@@ -71,6 +71,8 @@ final class DataFiles
 
     /**
      * En-tête seul de l'historique (fichier vide).
+     *
+     * @return non-empty-string
      */
     public static function historyHeader(): string
     {
