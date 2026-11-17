@@ -1,7 +1,7 @@
 {
     "source": "DGFiP, impots.gouv.fr",
     "page": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
-    "date_source": "2026-11-14",
+    "date_source": "2026-11-17",
     "nombre": 165,
     "nombres": {
         "immatriculee": 159,
@@ -257,8 +257,8 @@
                 "pays": "France"
             },
             "site_internet": "https://www.basikon.com/fr",
-            "date_immatriculation": null,
-            "immatriculation_en_attente": true
+            "date_immatriculation": "2026-11-09",
+            "immatriculation_en_attente": false
         },
         {
             "cle": "nom:basware",
