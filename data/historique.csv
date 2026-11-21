@@ -164,3 +164,14 @@
 2026-11-14;entree;nom:ytems;immatriculee;YTEMS;immatriculée
 2026-11-14;entree;nom:yuman;attente_tests_interoperabilite;YUMAN;en attente des tests d'interopérabilité
 2026-11-14;entree;nom:zefyr;immatriculee;ZEFYR;immatriculée
+2026-11-21;changement_nom;nom:a-cube;immatriculee;A-CUBE;A-Cube -> A-CUBE
+2026-11-21;changement_nom;nom:chaintrust-by-visma;immatriculee;CHAINTRUST BY VISMA;CHAINTRUST by Visma -> CHAINTRUST BY VISMA
+2026-11-21;changement_nom;nom:eezi-powered-by-vat-it;immatriculee;Eezi-powered by VAT IT;EEZI powered by VAT IT -> Eezi-powered by VAT IT
+2026-11-21;changement_statut;nom:ey-expertises-transactions;immatriculee;EY Expertises & Transactions;attente_tests_interoperabilite -> immatriculee
+2026-11-21;entree;nom:inexchange-aps;immatriculee;Inexchange ApS;immatriculée
+2026-11-21;changement_nom;nom:ponsot-conseil-gestion;immatriculee;PONSOT CONSEIL GESTION;Ponsot Conseil Gestion -> PONSOT CONSEIL GESTION
+2026-11-21;changement_nom;nom:transalis-limited;immatriculee;TRANSALIS LIMITED;Transalis Limited -> TRANSALIS LIMITED
+2026-11-21;entree;nom:wisetech;immatriculee;WISETECH;immatriculée
+2026-11-21;sortie;nom:legalinvoice-by-tinexta-infocert;immatriculee;Legalinvoice by Tinexta Infocert;retirée de la liste « immatriculée »
+2026-11-21;sortie;nom:mysupply-aps;immatriculee;MySupply Aps;retirée de la liste « immatriculée »
+2026-11-21;sortie;nom:wisetech-global;immatriculee;WiseTech GLOBAL;retirée de la liste « immatriculée »

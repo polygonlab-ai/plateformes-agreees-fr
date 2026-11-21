@@ -1,16 +1,16 @@
 {
     "source": "DGFiP, impots.gouv.fr",
     "page": "https://www.impots.gouv.fr/je-consulte-la-liste-des-plateformes-agreees",
-    "date_source": "2026-11-17",
-    "nombre": 165,
+    "date_source": "2026-11-21",
+    "nombre": 164,
     "nombres": {
         "immatriculee": 159,
-        "attente_tests_interoperabilite": 6
+        "attente_tests_interoperabilite": 5
     },
     "plateformes": [
         {
             "cle": "nom:a-cube",
-            "nom_commercial": "A-Cube",
+            "nom_commercial": "A-CUBE",
             "statut": "immatriculee",
             "adresse": {
                 "voie": "via Pisani Vittor 20, Milan",
@@ -299,8 +299,8 @@
                 "pays": "Luxembourg"
             },
             "site_internet": "https://befresh.lu/",
-            "date_immatriculation": null,
-            "immatriculation_en_attente": true
+            "date_immatriculation": "2026-10-12",
+            "immatriculation_en_attente": false
         },
         {
             "cle": "nom:billit",
@@ -416,7 +416,7 @@
         },
         {
             "cle": "nom:chaintrust-by-visma",
-            "nom_commercial": "CHAINTRUST by Visma",
+            "nom_commercial": "CHAINTRUST BY VISMA",
             "statut": "immatriculee",
             "adresse": {
                 "voie": "9 rue des Colonnes",
@@ -724,7 +724,7 @@
         },
         {
             "cle": "nom:eezi-powered-by-vat-it",
-            "nom_commercial": "EEZI powered by VAT IT",
+            "nom_commercial": "Eezi-powered by VAT IT",
             "statut": "immatriculee",
             "adresse": {
                 "voie": "29-31 Boulevard de le Paix",
@@ -837,7 +837,7 @@
         {
             "cle": "nom:ey-expertises-transactions",
             "nom_commercial": "EY Expertises & Transactions",
-            "statut": "attente_tests_interoperabilite",
+            "statut": "immatriculee",
             "adresse": {
                 "voie": "1-2 place des saisons",
                 "code_postal": "92400",
@@ -845,7 +845,7 @@
                 "pays": "France"
             },
             "site_internet": "https://www.ey.com/fr_fr",
-            "date_immatriculation": null,
+            "date_immatriculation": "2026-11-19",
             "immatriculation_en_attente": false
         },
         {
@@ -873,8 +873,8 @@
                 "pays": "France"
             },
             "site_internet": "https://www.factureapp.com/",
-            "date_immatriculation": null,
-            "immatriculation_en_attente": true
+            "date_immatriculation": "2026-10-09",
+            "immatriculation_en_attente": false
         },
         {
             "cle": "nom:fiducial-cloud",
@@ -1129,6 +1129,20 @@
             "immatriculation_en_attente": false
         },
         {
+            "cle": "nom:inexchange-aps",
+            "nom_commercial": "Inexchange ApS",
+            "statut": "immatriculee",
+            "adresse": {
+                "voie": "Østre Fælledvej 8, Nørresundby",
+                "code_postal": "9400",
+                "commune_ou_pays": "Danemark",
+                "pays": "Danemark"
+            },
+            "site_internet": "https://mysupply.dk/en",
+            "date_immatriculation": "2026-03-03",
+            "immatriculation_en_attente": false
+        },
+        {
             "cle": "nom:infologic",
             "nom_commercial": "INFOLOGIC",
             "statut": "immatriculee",
@@ -1237,8 +1251,8 @@
                 "pays": "France"
             },
             "site_internet": "https://www.kalanda.net/",
-            "date_immatriculation": null,
-            "immatriculation_en_attente": true
+            "date_immatriculation": "2026-10-09",
+            "immatriculation_en_attente": false
         },
         {
             "cle": "nom:klekoon",
@@ -1308,20 +1322,6 @@
             },
             "site_internet": "https://village-connecte.fr/",
             "date_immatriculation": "2026-01-08",
-            "immatriculation_en_attente": false
-        },
-        {
-            "cle": "nom:legalinvoice-by-tinexta-infocert",
-            "nom_commercial": "Legalinvoice by Tinexta Infocert",
-            "statut": "immatriculee",
-            "adresse": {
-                "voie": "Piazzale Flaminio 1B, Rome",
-                "code_postal": "00196",
-                "commune_ou_pays": "Italie",
-                "pays": "Italie"
-            },
-            "site_internet": "https://www.infocert.it/",
-            "date_immatriculation": "2026-04-13",
             "immatriculation_en_attente": false
         },
         {
@@ -1419,8 +1419,8 @@
                 "pays": "France"
             },
             "site_internet": "https://dailyapps.fr/",
-            "date_immatriculation": null,
-            "immatriculation_en_attente": true
+            "date_immatriculation": "2026-10-12",
+            "immatriculation_en_attente": false
         },
         {
             "cle": "nom:my-fiteco",
@@ -1462,20 +1462,6 @@
             },
             "site_internet": "https://www.kinexo.fr/",
             "date_immatriculation": "2026-01-15",
-            "immatriculation_en_attente": false
-        },
-        {
-            "cle": "nom:mysupply-aps",
-            "nom_commercial": "MySupply Aps",
-            "statut": "immatriculee",
-            "adresse": {
-                "voie": "Østre Fælledvej 8, Nørresundby",
-                "code_postal": "9400",
-                "commune_ou_pays": "Danemark",
-                "pays": "Danemark"
-            },
-            "site_internet": "https://mysupply.dk/en",
-            "date_immatriculation": "2026-03-03",
             "immatriculation_en_attente": false
         },
         {
@@ -1573,7 +1559,7 @@
                 "pays": "France"
             },
             "site_internet": "https://www.openbee.com",
-            "date_immatriculation": "2026-01-13",
+            "date_immatriculation": "2026-01-12",
             "immatriculation_en_attente": false
         },
         {
@@ -1662,7 +1648,7 @@
         },
         {
             "cle": "nom:ponsot-conseil-gestion",
-            "nom_commercial": "Ponsot Conseil Gestion",
+            "nom_commercial": "PONSOT CONSEIL GESTION",
             "statut": "immatriculee",
             "adresse": {
                 "voie": "185 Avenue Henri Mauriat",
@@ -1671,8 +1657,8 @@
                 "pays": "France"
             },
             "site_internet": "https://www.ponsotconseilgestion.com/",
-            "date_immatriculation": null,
-            "immatriculation_en_attente": true
+            "date_immatriculation": "2026-11-02",
+            "immatriculation_en_attente": false
         },
         {
             "cle": "nom:qonto",
@@ -2110,7 +2096,7 @@
         },
         {
             "cle": "nom:transalis-limited",
-            "nom_commercial": "Transalis Limited",
+            "nom_commercial": "TRANSALIS LIMITED",
             "statut": "immatriculee",
             "adresse": {
                 "voie": "Kyriakou Matsi 16, Nicosie",
@@ -2235,8 +2221,8 @@
             "immatriculation_en_attente": false
         },
         {
-            "cle": "nom:wisetech-global",
-            "nom_commercial": "WiseTech GLOBAL",
+            "cle": "nom:wisetech",
+            "nom_commercial": "WISETECH",
             "statut": "immatriculee",
             "adresse": {
                 "voie": "25 Bourke Road, Alexandria NSW 2015",
@@ -2315,8 +2301,8 @@
                 "pays": "France"
             },
             "site_internet": "https://www.zefyr.net/",
-            "date_immatriculation": null,
-            "immatriculation_en_attente": true
+            "date_immatriculation": "2026-11-02",
+            "immatriculation_en_attente": false
         }
     ]
 }

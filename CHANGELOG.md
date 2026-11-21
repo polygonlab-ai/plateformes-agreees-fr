@@ -6,6 +6,53 @@ changement de la liste officielle donne une version de correctif, publiée autom
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et le projet respecte
 le [versionnage sémantique](https://semver.org/lang/fr/).
 
+## [0.2.1] - 2026-11-21 - Liste du 21/11/2026 : 25 changements
+
+### Entrées dans une liste
+
+- Inexchange ApS (Danemark) (immatriculée)
+- WISETECH (Australie) (immatriculée)
+
+### Sorties
+
+- Legalinvoice by Tinexta Infocert (Italie)
+- MySupply Aps (Danemark)
+- WiseTech GLOBAL (Australie)
+
+### Changements de statut
+
+- EY Expertises & Transactions (Courbevoie) : en attente des tests d'interopérabilité -> immatriculée
+
+### Changements de nom
+
+- A-CUBE (Italie) : A-Cube -> A-CUBE
+- CHAINTRUST BY VISMA (Paris) : CHAINTRUST by Visma -> CHAINTRUST BY VISMA
+- Eezi-powered by VAT IT (SaintGermain-en-Laye) : EEZI powered by VAT IT -> Eezi-powered by VAT IT
+- PONSOT CONSEIL GESTION (Aix-en-Provence) : Ponsot Conseil Gestion -> PONSOT CONSEIL GESTION
+- TRANSALIS LIMITED (Chypre) : Transalis Limited -> TRANSALIS LIMITED
+
+### Autres modifications
+
+- BE FRESH S.à r.l. (Luxembourg) : date_immatriculation (vide) -> 2026-10-12
+- BE FRESH S.à r.l. (Luxembourg) : immatriculation_en_attente oui -> non
+- EY Expertises & Transactions (Courbevoie) : date_immatriculation (vide) -> 2026-11-19
+- FACTUREAPP (Lyon) : date_immatriculation (vide) -> 2026-10-09
+- FACTUREAPP (Lyon) : immatriculation_en_attente oui -> non
+- KALANDA (La Ciotat) : date_immatriculation (vide) -> 2026-10-09
+- KALANDA (La Ciotat) : immatriculation_en_attente oui -> non
+- MY-EDDY (Rillieux-la-Pape) : date_immatriculation (vide) -> 2026-10-12
+- MY-EDDY (Rillieux-la-Pape) : immatriculation_en_attente oui -> non
+- OPEN BEE (Epagny Metz-Tessy) : date_immatriculation 2026-01-13 -> 2026-01-12
+- PONSOT CONSEIL GESTION (Aix-en-Provence) : date_immatriculation (vide) -> 2026-11-02
+- PONSOT CONSEIL GESTION (Aix-en-Provence) : immatriculation_en_attente oui -> non
+- ZEFYR (Paris) : date_immatriculation (vide) -> 2026-11-02
+- ZEFYR (Paris) : immatriculation_en_attente oui -> non
+
+### Listes
+
+- Plateformes qui remplissent toutes les conditions, tests d'interopérabilité compris : 159 plateformes
+- Plateformes au dossier complet, en attente des tests d'interopérabilité : 5 plateformes
+
 ## [0.2.0] - 2026-11-21 - Lecture des listes au format ODS quand le fichier XLSX n'est plus servi
 
 ### Ajouté
@@ -56,6 +103,7 @@ le [versionnage sémantique](https://semver.org/lang/fr/).
 - Les adresses de contact des fichiers officiels ne sont jamais recopiées ; aucun SIREN n'est déduit du nom (les fichiers n'en donnent pas).
 - Source : DGFiP, impots.gouv.fr, Licence Ouverte 2.0.
 
+[0.2.1]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.2.1
 [0.2.0]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.2.0
 [0.1.2]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.1.2
 [0.1.1]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.1.1
