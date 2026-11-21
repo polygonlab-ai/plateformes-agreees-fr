@@ -6,6 +6,7 @@ namespace PolygonLab\PlateformesAgreees\Tests;
 
 use PHPUnit\Framework\TestCase;
 use PolygonLab\PlateformesAgreees\Outils\DataFiles;
+use PolygonLab\PlateformesAgreees\Tests\Fixtures\OdsBuilder;
 use PolygonLab\PlateformesAgreees\Tests\Fixtures\Workspace;
 use PolygonLab\PlateformesAgreees\Tests\Fixtures\XlsxBuilder;
 
@@ -64,6 +65,52 @@ final class CommandTest extends TestCase
         self::assertStringContainsString('Liste inchangée : aucun fichier modifié.', $output);
     }
 
+    public function testReadsAnOdsFileGivenAsSourceOrInTheManifest(): void
+    {
+        $awaiting = [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6)];
+        $inputs = $this->workspace->inputs([XlsxBuilder::platform('Alpha Facturation')], $awaiting);
+        $ods = OdsBuilder::file($this->workspace->path . '/attente.ods', $awaiting, false);
+
+        [$code, $output] = $this->command([
+            '--source', 'immatriculee=' . $inputs['immatriculee']['chemin'],
+            '--source', 'attente_tests_interoperabilite=' . $ods,
+            '--donnees', $this->workspace->data,
+        ]);
+
+        self::assertSame(0, $code, $output);
+        self::assertStringContainsString('Fichiers de data/ réécrits.', $output);
+        $source = DataFiles::decode($this->workspace->read(DataFiles::SOURCE_JSON), DataFiles::SOURCE_JSON);
+        self::assertIsArray($source['fichiers']);
+        self::assertIsArray($source['fichiers'][1]);
+        self::assertSame('liste_pa_attente_test_interop.ods', $source['fichiers'][1]['fichier'], 'format de repli de même extension que le fichier fourni');
+        self::assertIsString($source['fichiers'][1]['url']);
+        self::assertStringEndsWith('/liste_pa_attente_test_interop.ods', $source['fichiers'][1]['url']);
+
+        // Même liste par le manifeste, le fichier ODS déclaré avec son adresse : rien ne change.
+        $inputs['attente_tests_interoperabilite'] = ['chemin' => $ods, 'url' => $source['fichiers'][1]['url'], 'derniere_modification' => null];
+        [$code, $output] = $this->command(['--manifeste', $this->manifest($inputs), '--donnees', $this->workspace->data]);
+        self::assertSame(0, $code, $output);
+        self::assertStringContainsString('Liste inchangée : aucun fichier modifié.', $output);
+    }
+
+    public function testRefusesAFileThatIsNeitherXlsxNorOds(): void
+    {
+        $before = $this->workspace->read(DataFiles::PLATFORMS_JSON);
+        $inputs = $this->workspace->inputs([XlsxBuilder::platform('Alpha Facturation')], [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6)]);
+        $pdf = $this->workspace->path . '/liste.pdf';
+        copy($inputs['immatriculee']['chemin'], $pdf);
+
+        [$code, $output] = $this->command([
+            '--source', 'immatriculee=' . $pdf,
+            '--source', 'attente_tests_interoperabilite=' . $inputs['attente_tests_interoperabilite']['chemin'],
+            '--donnees', $this->workspace->data,
+        ]);
+
+        self::assertSame(1, $code);
+        self::assertStringContainsString('format non pris en charge (fichier « .xlsx » ou « .ods » attendu)', $output);
+        self::assertSame($before, $this->workspace->read(DataFiles::PLATFORMS_JSON));
+    }
+
     public function testRefusesABadSourceAndWritesNothing(): void
     {
         $before = $this->workspace->read(DataFiles::PLATFORMS_JSON);
@@ -97,6 +144,7 @@ final class CommandTest extends TestCase
 
         self::assertSame(0, $code);
         self::assertStringContainsString('Usage : php tools/actualiser.php', $output);
+        self::assertStringContainsString('au format XLSX ou ODS', $output);
     }
 
     /**

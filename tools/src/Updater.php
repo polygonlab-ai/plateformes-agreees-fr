@@ -14,7 +14,11 @@ namespace PolygonLab\PlateformesAgreees\Outils;
  *   - fichier source illisible, colonne inconnue, manquante ou en trop, date illisible, adresse e-mail hors de la
  *     colonne des courriels, nom commercial absent, doublon, liste vide (ListReader) ;
  *   - colonnes différentes de celles de la lecture précédente (data/source.json), sauf option --accepter-colonnes ;
+ *     d'un format à l'autre (XLSX puis ODS, ou l'inverse), la typographie des intitulés n'est pas comparée ;
  *   - plateforme présente dans les deux listes à la fois.
+ *
+ * Chaque liste est lue dans le fichier fourni, quel que soit son format (XLSX, ou ODS quand le fichier principal n'est
+ * plus servi) : data/source.json garde le nom, l'adresse et l'empreinte du fichier réellement lu.
  *
  * @phpstan-type Input array{chemin: string, url: string, derniere_modification: string|null}
  * @phpstan-type Event array{date: string, evenement: string, cle: string, statut: string, nom_commercial: string, detail: string}
@@ -62,8 +66,10 @@ final class Updater
                 throw new SourceError(sprintf('Fichier de la liste « %s » non fourni (%s).', $key, $file['fichier']));
             }
             $input = $inputs[$key];
-            $read = ListReader::read($input['chemin'], $file['fichier'], $key, $file['colonnes']);
-            $this->checkColumns($previousSource, $key, $file['fichier'], $read['columns'], $acceptColumns);
+            // Fichier réellement lu : le fichier principal de la liste, ou l'un de ses formats de repli.
+            $format = $this->sources->format($key, $input['chemin'], $input['url']);
+            $read = ListReader::read($input['chemin'], $format['fichier'], $key, $file['colonnes']);
+            $this->checkColumns($previousSource, $key, $format['fichier'], $read['columns'], $acceptColumns);
 
             foreach ($read['platforms'] as $platform) {
                 if (isset($platforms[$platform->key])) {
@@ -86,7 +92,7 @@ final class Updater
             $size = filesize($input['chemin']);
             $sourceFiles[] = [
                 'cle' => $key,
-                'fichier' => $file['fichier'],
+                'fichier' => $format['fichier'],
                 'url' => $input['url'],
                 'sha256' => $hash === false ? '' : $hash,
                 'taille' => $size === false ? 0 : $size,
@@ -316,7 +322,8 @@ final class Updater
             if (!\is_array($previous) || ($previous['cle'] ?? null) !== $key || !\is_array($previous['colonnes'] ?? null)) {
                 continue;
             }
-            if ($previous['colonnes'] !== $columns && !$acceptColumns) {
+            $previousFile = $previous['fichier'] ?? null;
+            if (!self::sameColumns($previous['colonnes'], $columns, \is_string($previousFile) ? $previousFile : $file, $file) && !$acceptColumns) {
                 throw new SourceError(sprintf(
                     "%s : colonnes modifiées depuis la dernière lecture.\nAvant : « %s ».\nMaintenant : « %s ».\nVérifier le fichier, puis relancer avec --accepter-colonnes.",
                     $file,
@@ -325,6 +332,28 @@ final class Updater
                 ));
             }
         }
+    }
+
+    /**
+     * Intitulés identiques à ceux de la lecture précédente ? Dans le même format, la comparaison est exacte. D'un
+     * format à l'autre (liste lue en ODS après l'avoir été en XLSX, ou l'inverse), elle ne tient pas compte de la
+     * typographie (apostrophes, accents, majuscules, espaces) : deux exports officiels du même tableau peuvent différer
+     * sur ces détails sans que la liste ait changé de colonnes.
+     *
+     * @param array<mixed> $previous
+     * @param list<string> $columns
+     */
+    private static function sameColumns(array $previous, array $columns, string $previousFile, string $file): bool
+    {
+        if ($previous === $columns) {
+            return true;
+        }
+        if (Sources::extension($previousFile) === Sources::extension($file) || \count($previous) !== \count($columns)) {
+            return false;
+        }
+
+        return array_map(static fn(mixed $column): string => \is_string($column) ? Columns::normalize($column) : '', array_values($previous))
+            === array_map(Columns::normalize(...), $columns);
     }
 
     /**

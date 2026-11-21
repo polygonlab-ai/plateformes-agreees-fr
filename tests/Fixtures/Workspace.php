@@ -51,7 +51,8 @@ final class Workspace
     }
 
     /**
-     * Entrées attendues par Updater::run() pour deux classeurs déjà écrits.
+     * Entrées attendues par Updater::run() pour deux classeurs déjà écrits, au format XLSX ou ODS : l'adresse est
+     * celle du format fourni (fichier principal, ou format de repli de même extension).
      *
      * @return array<string, array{chemin: string, url: string, derniere_modification: string|null}>
      */
@@ -60,7 +61,7 @@ final class Workspace
         $sources = Sources::load();
         $inputs = [];
         foreach ([Platform::STATUS_REGISTERED => $registered, Platform::STATUS_AWAITING_TESTS => $awaiting] as $key => $path) {
-            $inputs[$key] = ['chemin' => $path, 'url' => $sources->file($key)['url'], 'derniere_modification' => $modified];
+            $inputs[$key] = ['chemin' => $path, 'url' => $sources->format($key, $path)['url'], 'derniere_modification' => $modified];
         }
 
         return $inputs;

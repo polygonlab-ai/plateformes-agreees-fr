@@ -10,6 +10,7 @@ use PolygonLab\PlateformesAgreees\Outils\ListReader;
 use PolygonLab\PlateformesAgreees\Outils\Platform;
 use PolygonLab\PlateformesAgreees\Outils\SourceError;
 use PolygonLab\PlateformesAgreees\Outils\Sources;
+use PolygonLab\PlateformesAgreees\Tests\Fixtures\OdsBuilder;
 use PolygonLab\PlateformesAgreees\Tests\Fixtures\XlsxBuilder;
 
 /**
@@ -68,6 +69,60 @@ final class ListReaderTest extends TestCase
         foreach ($result['platforms'] as $platform) {
             self::assertArrayNotHasKey('courriel', $platform->fields, 'le courriel est lu mais jamais gardé');
             self::assertStringNotContainsString('@example.com', (string) json_encode($platform->toArray()));
+        }
+    }
+
+    /**
+     * La même liste, publiée par la DGFiP en XLSX et en ODS, donne le même résultat dans les deux formats : mêmes
+     * intitulés, mêmes plateformes dans le même ordre, mêmes champs, mêmes valeurs.
+     */
+    public function testReadsTheSameListFromXlsxAndOds(): void
+    {
+        $registered = [
+            XlsxBuilder::platform('Alpha Facturation', 46002),
+            ['@GP', 'via Esempio 20, Milan ', 20124, 'Italie', 'https://www.example.com/gp ', 'gp@example.com', 46224],
+            ['Bêta  Échanges', ' 2 avenue de l\'Essai', '1930', 'Belgique', null, 'beta@example.com', '15/01/2026'],
+            ['Gamma Factures', '3 promenade des Exemples', 6200, 'Nice', 'https://www.example.com/gamma', null, 'En attente'],
+            ['Delta & Flux « SAS »', "4 rue du Test\nBâtiment B", '97400', 'Saint-Denis', null, 'delta@example.com', 'num:46340.0'],
+        ];
+        $awaiting = [
+            array_slice(XlsxBuilder::platform('Epsilon Dématérialisation'), 0, 6),
+            ['Zêta Oy', 'Esimerkkikatu 1', '02150', 'Espoo (Finlande)', 'https://www.example.com/zeta', 'zeta@example.com'],
+        ];
+
+        $this->assertSameListInBothFormats(Platform::STATUS_REGISTERED, $registered, true);
+        $this->assertSameListInBothFormats(Platform::STATUS_AWAITING_TESTS, $awaiting, false);
+    }
+
+    public function testReadsDatesWrittenAsOdsDateCells(): void
+    {
+        $ods = substr($this->file, 0, -5) . '.ods';
+        try {
+            OdsBuilder::file($ods, [
+                XlsxBuilder::platform('Alpha Facturation', 46002),
+                ['Bêta Échanges', '2 avenue de l\'Essai', '75002', 'Paris', null, null, 'date:2026-07-21T00:00:00'],
+            ]);
+
+            $result = ListReader::read($ods, 'liste.ods', Platform::STATUS_REGISTERED, $this->expected(Platform::STATUS_REGISTERED));
+        } finally {
+            @unlink($ods);
+        }
+
+        self::assertSame('2025-12-11', $result['platforms'][0]->fields['date_immatriculation'], 'cellule de date ODS');
+        self::assertSame('2026-07-21', $result['platforms'][1]->fields['date_immatriculation'], 'date ODS avec une heure à minuit');
+    }
+
+    public function testRefusesAFileThatIsNeitherXlsxNorOds(): void
+    {
+        $pdf = substr($this->file, 0, -5) . '.pdf';
+        XlsxBuilder::file($pdf, [XlsxBuilder::platform('Alpha Facturation')]);
+
+        try {
+            $this->expectException(SourceError::class);
+            $this->expectExceptionMessage('liste.pdf : format non pris en charge (fichier « .xlsx » ou « .ods » attendu).');
+            ListReader::read($pdf, 'liste.pdf', Platform::STATUS_REGISTERED, $this->expected(Platform::STATUS_REGISTERED));
+        } finally {
+            @unlink($pdf);
         }
     }
 
@@ -343,6 +398,35 @@ final class ListReaderTest extends TestCase
         $this->expectException(SourceError::class);
         $this->expectExceptionMessage('colonne J, sous un en-tête vide');
         $this->read($rows, Platform::STATUS_REGISTERED);
+    }
+
+    /**
+     * Écrit la même liste en XLSX et en ODS, lit les deux et compare tout ce que rend la lecture.
+     *
+     * @param list<array{0: string|null, 1?: string|int|null, 2?: string|int|null, 3?: string|null, 4?: string|null, 5?: string|null, 6?: string|int|null}> $platforms
+     */
+    private function assertSameListInBothFormats(string $status, array $platforms, bool $withDate): void
+    {
+        $ods = substr($this->file, 0, -5) . '.ods';
+        try {
+            XlsxBuilder::file($this->file, $platforms, $withDate);
+            OdsBuilder::file($ods, $platforms, $withDate);
+
+            $fromXlsx = ListReader::read($this->file, 'liste.xlsx', $status, $this->expected($status));
+            $fromOds = ListReader::read($ods, 'liste.ods', $status, $this->expected($status));
+        } finally {
+            @unlink($ods);
+        }
+
+        self::assertSame($fromXlsx['columns'], $fromOds['columns'], $status . ' : mêmes intitulés');
+        self::assertSame($fromXlsx['sheet'], $fromOds['sheet']);
+        self::assertSame($fromXlsx['stated_date'], $fromOds['stated_date']);
+        self::assertCount(\count($platforms), $fromOds['platforms']);
+        self::assertSame(
+            array_map(static fn(Platform $platform): array => [$platform->key, $platform->status, $platform->fields], $fromXlsx['platforms']),
+            array_map(static fn(Platform $platform): array => [$platform->key, $platform->status, $platform->fields], $fromOds['platforms']),
+            $status . ' : mêmes plateformes, mêmes champs, mêmes valeurs, même ordre',
+        );
     }
 
     /**

@@ -36,6 +36,8 @@ publiée dès que la liste officielle change.
 - Dates d'immatriculation converties au format ISO (`AAAA-MM-JJ`).
 - Historique daté : entrées, sorties, changements de statut et de nom.
 - Traçabilité de la source : adresse, empreinte SHA-256 et date de chaque fichier lu.
+- Copie tenue à jour même quand la source retire un fichier : si le fichier XLSX d'une liste n'est plus servi, la
+  même liste est lue dans son format ODS officiel.
 - Schéma JSON du fichier principal, vérifié à chaque publication.
 - Outil d'actualisation en PHP, utilisable par n'importe qui pour refaire la copie soi-même.
 
@@ -180,6 +182,9 @@ Pour chaque fichier lu : clé de la liste, nom du fichier, adresse, empreinte SH
 modification annoncée par le serveur, date écrite dans le fichier, feuille et colonnes lues, nombre de lignes.
 Plus la date de lecture (`lu_le`) et la date de la liste (`date_source`).
 
+Le nom, l'adresse et l'empreinte sont ceux du fichier **réellement lu** : le fichier XLSX de la liste ou, quand il
+n'est plus servi par la source, son fichier ODS (voir « Formats lus et format de repli »).
+
 ## Configuration
 
 L'outil d'actualisation refait la copie à partir des fichiers officiels, sans aucune bibliothèque à installer :
@@ -190,7 +195,7 @@ php tools/actualiser.php
 
 | Option | Type | Valeur par défaut | Rôle |
 |---|---|---|---|
-| `--source <liste>=<fichier.xlsx>` | chemin | téléchargement | Fichier déjà téléchargé (`immatriculee` ou `attente_tests_interoperabilite`) |
+| `--source <liste>=<fichier>` | chemin | téléchargement | Fichier déjà téléchargé, au format XLSX ou ODS (`immatriculee` ou `attente_tests_interoperabilite`) |
 | `--manifeste <fichier.json>` | chemin | aucun | Fichiers déjà téléchargés, avec leur date de modification |
 | `--donnees <dossier>` | chemin | `data/` | Dossier des données à mettre à jour |
 | `--resume <fichier.json>` | chemin | aucun | Résumé des changements, en JSON |
@@ -203,6 +208,39 @@ la date de délivrance n'existe que dans la liste des plateformes immatriculées
 devant une colonne inconnue, manquante ou en trop, des intitulés changés depuis la lecture précédente, une date
 illisible (autre que « En attente »), un code postal français qui n'a pas 4 ou 5 chiffres, une adresse e-mail hors de la colonne des courriels, un nom commercial absent ou en double, une liste
 vide ou une plateforme présente dans les deux listes.
+
+### Formats lus et format de repli
+
+La DGFiP publie chaque liste en trois formats : XLSX, ODS et PDF. L'outil lit le **XLSX** et l'**ODS**, sans
+bibliothèque extérieure, et obtient exactement le même résultat avec l'un ou l'autre : mêmes champs, mêmes valeurs,
+même ordre. Le PDF n'est pas lu : un tableau ne s'en extrait pas de façon sûre.
+
+`tools/sources.json` déclare pour chaque liste son fichier principal (XLSX) et, sous `replis`, les autres formats
+officiels de la même liste, dans l'ordre où ils s'essaient :
+
+```json
+{
+    "cle": "attente_tests_interoperabilite",
+    "fichier": "liste_pa_attente_test_interop.xlsx",
+    "url": "https://www.impots.gouv.fr/…/liste_pa_attente_test_interop.xlsx",
+    "replis": [
+        { "fichier": "liste_pa_attente_test_interop.ods", "url": "https://www.impots.gouv.fr/…/liste_pa_attente_test_interop.ods" }
+    ]
+}
+```
+
+| Situation | Ce que fait l'outil |
+|---|---|
+| Le fichier XLSX est servi | Il est lu. Le format ODS n'est pas demandé |
+| Le fichier XLSX n'est plus servi (réponse HTTP 404 ou 410) | La même liste est lue au format ODS ; `data/source.json` garde le nom, l'adresse et l'empreinte du fichier ODS |
+| Le fichier XLSX est de nouveau servi | Il est repris de lui-même au passage suivant : le fichier principal est toujours essayé le premier |
+| Le site est en panne (erreur du serveur, délai dépassé) | Pas de repli : rien n'est écrit, nouvel essai plus tard |
+| Aucun format n'est servi | Rien n'est écrit ; l'outil cite chaque format essayé et la raison de son échec |
+
+Un changement de format ne change pas les données : si la liste lue en ODS est la même que celle déjà publiée, aucune
+version n'est créée. Les intitulés de colonnes sont comparés à ceux de la lecture précédente à l'identique dans le
+même format ; d'un format à l'autre, la comparaison ne tient pas compte de la typographie (apostrophes, accents,
+majuscules, espaces).
 
 ## Limites
 
@@ -238,7 +276,8 @@ composer install
 composer test
 ```
 
-Les tests utilisent des classeurs fabriqués, sans appel réseau, et vérifient que `data/` respecte le schéma.
+Les tests utilisent des classeurs fabriqués (XLSX et ODS), sans appel réseau, vérifient que la même liste donne
+le même résultat dans les deux formats et que `data/` respecte le schéma.
 
 ## Contribuer
 

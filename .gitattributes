@@ -3,6 +3,7 @@
 
 # Classeurs et archives : jamais convertis.
 *.xlsx binary
+*.ods binary
 
 # Fichiers de développement exclus des paquets installés (seuls data/, schema/, README.md et LICENSE sont livrés).
 /.github export-ignore

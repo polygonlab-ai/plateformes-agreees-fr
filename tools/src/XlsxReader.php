@@ -239,8 +239,9 @@ final class XlsxReader
 
     /**
      * Nombre enregistré : un entier est rendu en chiffres, même s'il est écrit en notation scientifique.
+     * Même règle pour un classeur ODS (OdsReader) : les deux lecteurs rendent la même valeur.
      */
-    private static function number(string $raw): string
+    public static function number(string $raw): string
     {
         if (is_numeric($raw) && preg_match('/[eE.]/', $raw) === 1) {
             $float = (float) $raw;

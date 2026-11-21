@@ -5,7 +5,8 @@
  *
  * Usage :
  *   php tools/actualiser.php                                télécharge les deux fichiers XLSX, compare, réécrit data/
- *   php tools/actualiser.php --source immatriculee=a.xlsx --source attente_tests_interoperabilite=b.xlsx
+ *                                                           (fichier XLSX introuvable : la liste est lue au format ODS)
+ *   php tools/actualiser.php --source immatriculee=a.xlsx --source attente_tests_interoperabilite=b.ods
  *   php tools/actualiser.php --aide                         toutes les options
  *
  * Codes de sortie : 0 succès (ou liste inchangée), 1 source refusée (rien n'est écrit), 2 usage.

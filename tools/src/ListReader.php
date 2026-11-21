@@ -5,7 +5,12 @@ declare(strict_types=1);
 namespace PolygonLab\PlateformesAgreees\Outils;
 
 /**
- * Lit une liste de plateformes de la DGFiP (un fichier XLSX) et la contrôle.
+ * Lit une liste de plateformes de la DGFiP (un fichier XLSX, ou le même tableau au format ODS) et la contrôle.
+ *
+ * Le lecteur est choisi d'après l'extension du fichier lu : « .xlsx » (XlsxReader) ou « .ods » (OdsReader) ; toute
+ * autre extension est refusée. Les deux lecteurs rendent le même tableau : la suite de la lecture est la même, et la
+ * même liste donne le même résultat dans les deux formats. Seule l'écriture d'une date diffère à la source (nombre de
+ * série en XLSX, date AAAA-MM-JJ en ODS) : ListReader::date() lit les deux.
  *
  * Structure des fichiers (constatée le 14/11/2026) : une feuille, un en-tête sur deux lignes.
  *
@@ -63,7 +68,7 @@ final class ListReader
      */
     public static function read(string $path, string $label, string $status, array $expected): array
     {
-        $book = XlsxReader::read($path, $label);
+        $book = self::book($path, $label);
         $rows = $book['rows'];
 
         [$headerRow, $firstDataRow, $mapping, $columns] = self::header($rows, $book['merges'], $label, $expected);
@@ -149,6 +154,23 @@ final class ListReader
     }
 
     /**
+     * Classeur lu par le lecteur de son format, choisi d'après l'extension du fichier (sans tenir compte des
+     * majuscules) : « .xlsx » ou « .ods ».
+     *
+     * @return array{sheet: string, sheets: int, rows: array<int, array<int, string>>, merges: list<array{0: int, 1: int, 2: int, 3: int}>}
+     *
+     * @throws SourceError
+     */
+    public static function book(string $path, string $label): array
+    {
+        return match (Sources::extension($path)) {
+            'xlsx' => XlsxReader::read($path, $label),
+            'ods' => OdsReader::read($path, $label),
+            default => throw new SourceError(sprintf('%s : format non pris en charge (fichier « .xlsx » ou « .ods » attendu).', $label)),
+        };
+    }
+
+    /**
      * Vrai pour le texte « En attente » écrit à la place d'une date de délivrance, sans tenir compte des majuscules,
      * des accents ni des espaces.
      */
@@ -183,8 +205,9 @@ final class ListReader
     }
 
     /**
-     * Date ISO (AAAA-MM-JJ) d'une valeur de cellule : nombre de série Excel (calendrier 1900, jour 0 = 30/12/1899),
-     * date « JJ/MM/AAAA » ou date ISO. Null si la valeur est illisible.
+     * Date ISO (AAAA-MM-JJ) d'une valeur de cellule : nombre de série Excel (calendrier 1900, jour 0 = 30/12/1899 ;
+     * c'est ce que rend un classeur XLSX), date ISO (ce que rend un classeur ODS) ou date « JJ/MM/AAAA » écrite en
+     * texte. Null si la valeur est illisible.
      */
     public static function date(string $value): ?string
     {

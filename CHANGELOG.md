@@ -6,6 +6,21 @@ changement de la liste officielle donne une version de correctif, publiée autom
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et le projet respecte
 le [versionnage sémantique](https://semver.org/lang/fr/).
 
+## [0.2.0] - 2026-11-21 - Lecture des listes au format ODS quand le fichier XLSX n'est plus servi
+
+### Ajouté
+
+- Lecteur de classeur ODS (`tools/src/OdsReader.php`), sans bibliothèque extérieure : il rend le même tableau que le lecteur XLSX (cellules et lignes répétées, cellules fusionnées, nombres, dates, texte en plusieurs morceaux). La même liste donne le même résultat dans les deux formats.
+- Formats de repli dans `tools/sources.json` (champ `replis`) : chaque liste déclare son fichier ODS officiel à côté de son fichier XLSX. Le fichier XLSX est toujours essayé le premier ; s'il n'est plus servi par la source (réponse HTTP 404 ou 410), la même liste est lue au format ODS, et le fichier XLSX est repris de lui-même à son retour.
+- `--source <liste>=<fichier>` accepte un fichier ODS. Le PDF n'est pas lu : un tableau ne s'en extrait pas de façon sûre.
+
+### Modifié
+
+- `data/source.json` garde le nom, l'adresse et l'empreinte du fichier réellement lu, et non plus toujours le nom du fichier XLSX attendu.
+- Intitulés de colonnes comparés à ceux de la lecture précédente : à l'identique dans le même format, sans tenir compte de la typographie (apostrophes, accents, majuscules, espaces) d'un format à l'autre.
+- Tout fichier fourni qui n'est ni un XLSX ni un ODS est refusé, d'après son extension.
+- Données inchangées.
+
 ## [0.1.2] - 2026-11-17 - Liste du 17/11/2026 : 2 autres modifications
 
 ### Autres modifications
@@ -41,6 +56,7 @@ le [versionnage sémantique](https://semver.org/lang/fr/).
 - Les adresses de contact des fichiers officiels ne sont jamais recopiées ; aucun SIREN n'est déduit du nom (les fichiers n'en donnent pas).
 - Source : DGFiP, impots.gouv.fr, Licence Ouverte 2.0.
 
+[0.2.0]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.2.0
 [0.1.2]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.1.2
 [0.1.1]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.1.1
 [0.1.0]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.1.0

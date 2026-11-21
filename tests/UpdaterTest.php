@@ -6,9 +6,11 @@ namespace PolygonLab\PlateformesAgreees\Tests;
 
 use PHPUnit\Framework\TestCase;
 use PolygonLab\PlateformesAgreees\Outils\DataFiles;
+use PolygonLab\PlateformesAgreees\Outils\Platform;
 use PolygonLab\PlateformesAgreees\Outils\SourceError;
 use PolygonLab\PlateformesAgreees\Outils\Sources;
 use PolygonLab\PlateformesAgreees\Outils\Updater;
+use PolygonLab\PlateformesAgreees\Tests\Fixtures\OdsBuilder;
 use PolygonLab\PlateformesAgreees\Tests\Fixtures\Workspace;
 use PolygonLab\PlateformesAgreees\Tests\Fixtures\XlsxBuilder;
 
@@ -184,6 +186,88 @@ final class UpdaterTest extends TestCase
 
         $accepted = $updater->run($inputs, new \DateTimeImmutable('2026-11-15T06:20:00+01:00'), true);
         self::assertFalse($accepted['changed'], 'intitulés acceptés, données identiques');
+    }
+
+    /**
+     * Le fichier XLSX d'une liste n'est plus servi par la source : la même liste, lue au format ODS, ne change rien.
+     */
+    public function testTheSameListReadFromItsOdsFallbackChangesNothing(): void
+    {
+        $registered = [XlsxBuilder::platform('Alpha Facturation'), XlsxBuilder::platform('Bêta Échanges', 46224)];
+        $awaiting = [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6), array_slice(XlsxBuilder::platform('Delta Flux'), 0, 6)];
+        $this->workspace->store($this->update($registered, $awaiting)['files']);
+
+        $inputs = $this->workspace->files(
+            OdsBuilder::file($this->workspace->path . '/liste_pa_attente_rapport_audit.ods', $registered),
+            OdsBuilder::file($this->workspace->path . '/liste_pa_attente_test_interop.ods', $awaiting, false),
+        );
+        $result = (new Updater(Sources::load(), $this->workspace->data))->run($inputs, new \DateTimeImmutable('2026-11-22T06:20:00+01:00'));
+
+        self::assertStringEndsWith('/liste_pa_attente_test_interop.ods', $inputs[Platform::STATUS_AWAITING_TESTS]['url'], 'adresse du format de repli');
+        self::assertFalse($result['changed'], 'autre format, même liste : aucun changement, donc aucune version');
+        self::assertSame([], $result['files']);
+        self::assertSame('Liste du 12/11/2026 : aucun changement', $result['summary']['titre']);
+    }
+
+    /**
+     * Liste modifiée et lue au format ODS : data/source.json dit quel fichier a réellement été lu (nom, adresse,
+     * empreinte), liste par liste.
+     */
+    public function testRecordsTheFileActuallyRead(): void
+    {
+        $registered = [XlsxBuilder::platform('Alpha Facturation')];
+        $this->workspace->store($this->update($registered, [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6), array_slice(XlsxBuilder::platform('Delta Flux'), 0, 6)])['files']);
+
+        $xlsx = XlsxBuilder::file($this->workspace->path . '/liste_pa_attente_rapport_audit.xlsx', $registered);
+        $ods = OdsBuilder::file($this->workspace->path . '/liste_pa_attente_test_interop.ods', [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6)], false);
+        $result = (new Updater(Sources::load(), $this->workspace->data))->run($this->workspace->files($xlsx, $ods), new \DateTimeImmutable('2026-11-22T06:20:00+01:00'));
+
+        self::assertTrue($result['changed']);
+        self::assertSame('Liste du 12/11/2026 : 1 sortie', $result['summary']['titre']);
+        $source = DataFiles::decode($result['files'][DataFiles::SOURCE_JSON], DataFiles::SOURCE_JSON);
+        self::assertIsArray($source['fichiers']);
+        [$first, $second] = $source['fichiers'];
+        self::assertIsArray($first);
+        self::assertIsArray($second);
+        self::assertSame('liste_pa_attente_rapport_audit.xlsx', $first['fichier']);
+        self::assertSame(Sources::load()->file(Platform::STATUS_REGISTERED)['url'], $first['url']);
+        self::assertSame('attente_tests_interoperabilite', $second['cle']);
+        self::assertSame('liste_pa_attente_test_interop.ods', $second['fichier'], 'nom du fichier lu, pas celui du fichier attendu');
+        self::assertSame(Sources::load()->formats(Platform::STATUS_AWAITING_TESTS)[1]['url'], $second['url'], 'adresse du fichier lu');
+        self::assertSame(hash_file('sha256', $ods), $second['sha256'], 'empreinte du fichier lu');
+        self::assertSame(1, $second['lignes']);
+        $previous = DataFiles::decode($this->workspace->read(DataFiles::SOURCE_JSON), DataFiles::SOURCE_JSON);
+        self::assertIsArray($previous['fichiers']);
+        self::assertIsArray($previous['fichiers'][1]);
+        self::assertSame('liste_pa_attente_test_interop.xlsx', $previous['fichiers'][1]['fichier']);
+        self::assertSame($previous['fichiers'][1]['colonnes'], $second['colonnes'], 'mêmes intitulés que dans le fichier XLSX lu avant');
+    }
+
+    /**
+     * D'un format à l'autre, un intitulé écrit avec une autre apostrophe n'est pas un changement de colonnes ; dans
+     * le même format, il le reste (testRefusesChangedHeadersUnlessAccepted).
+     */
+    public function testIgnoresTypographyOfHeadersBetweenFormats(): void
+    {
+        $registered = [XlsxBuilder::platform('Alpha Facturation')];
+        $awaiting = [array_slice(XlsxBuilder::platform('Gamma Factures'), 0, 6)];
+        $this->workspace->store($this->update($registered, $awaiting)['files']);
+
+        $rows = XlsxBuilder::list($awaiting, false);
+        $rows[0][1] = "Adresse\nde l'ÉTABLISSEMENT  principal";
+        $ods = OdsBuilder::write($this->workspace->path . '/liste_pa_attente_test_interop.ods', $rows, 'Feuil1', XlsxBuilder::merges(false));
+        $xlsx = XlsxBuilder::file($this->workspace->path . '/liste_pa_attente_rapport_audit.xlsx', $registered);
+        $updater = new Updater(Sources::load(), $this->workspace->data);
+
+        $result = $updater->run($this->workspace->files($xlsx, $ods), new \DateTimeImmutable('2026-11-22T06:20:00+01:00'));
+        self::assertFalse($result['changed'], 'intitulé écrit autrement dans l\'autre format : même liste');
+
+        // Une colonne vraiment différente reste refusée d'un format à l'autre.
+        $rows[0][4] = 'Adresse du site';
+        OdsBuilder::write($ods, $rows, 'Feuil1', XlsxBuilder::merges(false));
+        $this->expectException(SourceError::class);
+        $this->expectExceptionMessage('liste_pa_attente_test_interop.ods, colonne E : intitulé « Adresse du site » inconnu');
+        $updater->run($this->workspace->files($xlsx, $ods), new \DateTimeImmutable('2026-11-22T06:20:00+01:00'));
     }
 
     public function testRefusesAPlatformListedTwice(): void

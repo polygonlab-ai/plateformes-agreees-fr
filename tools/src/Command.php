@@ -44,7 +44,8 @@ final class Command
                 $inputs = self::manifest($options['manifeste']);
             }
             foreach ($options['sources'] as $key => $path) {
-                $inputs[$key] = ['chemin' => $path, 'url' => $sources->file($key)['url'], 'derniere_modification' => null];
+                // Adresse du format fourni : celle du fichier XLSX, ou du format de repli de même extension (« .ods »).
+                $inputs[$key] = ['chemin' => $path, 'url' => $sources->format($key, $path)['url'], 'derniere_modification' => null];
             }
             if ($inputs === []) {
                 $temporary = sys_get_temp_dir() . '/plateformes-agreees-' . bin2hex(random_bytes(6));
@@ -53,8 +54,11 @@ final class Command
                 }
                 foreach ($sources->files as $file) {
                     fwrite($output, 'Téléchargement : ' . $file['url'] . "\n");
-                    $path = $temporary . '/' . basename($file['fichier']);
-                    $inputs[$file['cle']] = ['chemin' => $path, 'url' => $file['url'], 'derniere_modification' => Downloader::download($file['url'], $path)];
+                    $download = Downloader::first($sources->formats($file['cle']), $temporary);
+                    foreach ($download['introuvables'] as $missing) {
+                        fwrite($output, 'Fichier ' . $missing . ' introuvable chez la source : liste lue dans le format de repli ' . $download['fichier'] . ' (' . $download['url'] . ")\n");
+                    }
+                    $inputs[$file['cle']] = ['chemin' => $download['chemin'], 'url' => $download['url'], 'derniere_modification' => $download['derniere_modification']];
                 }
             }
 
@@ -89,9 +93,10 @@ final class Command
             Usage : php tools/actualiser.php [options]
 
             Sans option, télécharge les deux listes de la DGFiP (tools/sources.json), les compare à data/ et réécrit
-            les fichiers si la liste a changé.
+            les fichiers si la liste a changé. Si le fichier XLSX d'une liste n'est plus servi par la source, la même
+            liste est lue dans son format de repli (ODS).
 
-              --source <liste>=<fichier.xlsx>   fichier déjà téléchargé (listes : immatriculee,
+              --source <liste>=<fichier>        fichier déjà téléchargé, au format XLSX ou ODS (listes : immatriculee,
                                                 attente_tests_interoperabilite) ; option répétable
               --manifeste <fichier.json>        fichiers déjà téléchargés, avec leur date de modification
               --donnees <dossier>               dossier des données (défaut : data/ du dépôt)
@@ -153,7 +158,7 @@ final class Command
                 case '--source':
                     $parts = explode('=', (string) $value, 2);
                     if (\count($parts) !== 2 || !\in_array($parts[0], Platform::STATUSES, true) || $parts[1] === '') {
-                        throw new \InvalidArgumentException('--source attend <liste>=<fichier.xlsx>, liste parmi : ' . implode(', ', Platform::STATUSES) . '.');
+                        throw new \InvalidArgumentException('--source attend <liste>=<fichier.xlsx> ou <liste>=<fichier.ods>, liste parmi : ' . implode(', ', Platform::STATUSES) . '.');
                     }
                     $options['sources'][$parts[0]] = $parts[1];
                     break;

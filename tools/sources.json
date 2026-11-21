@@ -6,6 +6,12 @@
             "cle": "immatriculee",
             "fichier": "liste_pa_attente_rapport_audit.xlsx",
             "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.xlsx",
+            "replis": [
+                {
+                    "fichier": "liste_pa_attente_rapport_audit.ods",
+                    "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_rapport_audit.ods"
+                }
+            ],
             "libelle": "Plateformes qui remplissent toutes les conditions, tests d'interopérabilité compris",
             "colonnes": [
                 "nom_commercial",
@@ -21,6 +27,12 @@
             "cle": "attente_tests_interoperabilite",
             "fichier": "liste_pa_attente_test_interop.xlsx",
             "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.xlsx",
+            "replis": [
+                {
+                    "fichier": "liste_pa_attente_test_interop.ods",
+                    "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/listes_plateformes_agreees/liste_pa_attente_test_interop.ods"
+                }
+            ],
             "libelle": "Plateformes au dossier complet, en attente des tests d'interopérabilité",
             "colonnes": [
                 "nom_commercial",
