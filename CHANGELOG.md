@@ -6,6 +6,12 @@ changement de la liste officielle donne une version de correctif, publiée autom
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et le projet respecte
 le [versionnage sémantique](https://semver.org/lang/fr/).
 
+## [0.2.2] - 2026-11-21 - Intégration continue au vert
+
+### Corrigé
+
+- Lecteur ODS : la fin du document est lue jusqu'au bout après le classeur, pour qu'un fichier coupé soit refusé quelle que soit la version de libxml (le test `testRefusesAnUnreadableContent` échouait sur l'intégration continue). Données inchangées.
+
 ## [0.2.1] - 2026-11-21 - Liste du 21/11/2026 : 25 changements
 
 ### Entrées dans une liste
@@ -103,6 +109,7 @@ le [versionnage sémantique](https://semver.org/lang/fr/).
 - Les adresses de contact des fichiers officiels ne sont jamais recopiées ; aucun SIREN n'est déduit du nom (les fichiers n'en donnent pas).
 - Source : DGFiP, impots.gouv.fr, Licence Ouverte 2.0.
 
+[0.2.2]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.2.2
 [0.2.1]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.2.1
 [0.2.0]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.2.0
 [0.1.2]: https://github.com/polygonlab-ai/plateformes-agreees-fr/releases/tag/v0.1.2

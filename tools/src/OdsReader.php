@@ -116,6 +116,12 @@ final class OdsReader
                         continue;
                     }
                 } elseif ($reader->nodeType === \XMLReader::END_ELEMENT && $spreadsheet !== null && $reader->depth === $spreadsheet) {
+                    // Fin du classeur : la suite du document est lue sans être exploitée, pour qu'un fichier coupé
+                    // après le classeur soit refusé quelle que soit la version de libxml (certaines ne lisent pas
+                    // d'avance et ne verraient pas la coupure).
+                    while ($reader->read()) {
+                    }
+
                     break;
                 }
                 $more = $reader->read();
